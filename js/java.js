@@ -7,6 +7,7 @@ function nextImage(){
     images[currentImage].classList.add('active');
 }
 setInterval(nextImage,5000);//cambia la imagen cada 5 segundos
+
 //Script para insertar el texto del enlace copiando el contenido href
 const webLink=document.getElementById('company-web');
 webLink.textContent=webLink.href; 
@@ -28,8 +29,6 @@ function searchCategories() {
 }
 
 // Buscador diferentes categorias
-
-
 function searchBusinesses() {
         let input = document.getElementById('search').value.toLowerCase();
         let businessCards = document.querySelectorAll('.business-card');
@@ -45,17 +44,3 @@ function searchBusinesses() {
     }
 
 
-  // JavaScript para añadir la clase 'active' poco a poco a cada categoría
-  
-  window.addEventListener("load", function() {
-    const category= document.querySelectorAll('.category');
-    let delay = 500;
-
-    categories.forEach((category, index) => {
-      // Incrementing the delay to show categories one by one
-      setTimeout(() => {
-        category.classList.add('active');
-      }, delay);
-      delay += 500; // Add 500ms delay between each category
-    });
-  });
