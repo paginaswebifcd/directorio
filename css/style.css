@@ -189,3 +189,18 @@ h2{
 .category-item:hover .category-icon {
     color: #4e99e9;
 }
+
+
+.content {
+    flex: 1; /* Hace que el contenido ocupe el espacio disponible antes del footer */
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 98.5%;
+    margin-top: 20px;
+}
