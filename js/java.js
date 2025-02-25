@@ -8,7 +8,7 @@ function nextImage() {
     images[currentImage].classList.add('active');
 }
 
-setInterval(nextImage, 5000); // Cambia la imagen cada 5 segundos
+setInterval(nextImage, 3000); // Cambia la imagen cada 3 segundos
 
 // Script para insertar el texto del enlace copiando el contenido href
 const webLink = document.getElementById('company-web');
