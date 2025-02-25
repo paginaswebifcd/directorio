@@ -1,16 +1,20 @@
-//Script para el slider de imágenes
-const images=document.querySelectorAll('.slider-image');
-let currentImage=0;
-function nextImage(){
-    images[currentImage].classList.remove('active')
-    currentImage=(currentImage+1)%images.length;
+// Script para el slider de imágenes
+const images = document.querySelectorAll('.slider-image');
+let currentImage = 0;
+
+function nextImage() {
+    images[currentImage].classList.remove('active');
+    currentImage = (currentImage + 1) % images.length;
     images[currentImage].classList.add('active');
 }
-setInterval(nextImage,5000);//cambia la imagen cada 5 segundos
 
-//Script para insertar el texto del enlace copiando el contenido href
-const webLink=document.getElementById('company-web');
-webLink.textContent=webLink.href; 
+setInterval(nextImage, 5000); // Cambia la imagen cada 5 segundos
+
+// Script para insertar el texto del enlace copiando el contenido href
+const webLink = document.getElementById('company-web');
+if (webLink) {
+    webLink.textContent = webLink.href;
+}
 
 // Buscador index principal
 function searchCategories() {
@@ -19,41 +23,45 @@ function searchCategories() {
 
     items.forEach(item => {
         let text = item.innerText.toLowerCase();
+        item.style.display = text.includes(input) ? "flex" : "none";
         if (text.includes(input)) {
-            item.style.display = "flex"; // Cambia "block" por "flex"
             item.style.flexDirection = "column"; // Asegura que se vea bien
-        } else {
-            item.style.display = "none";
         }
     });
 }
 
-// Buscador diferentes categorias
+// Buscador diferentes categorías
 function searchBusinesses() {
-        let input = document.getElementById('search').value.toLowerCase();
-        let businessCards = document.querySelectorAll('.business-card');
-        
-        businessCards.forEach(card => {
-            let text = card.innerText.toLowerCase();
-            if (text.includes(input)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
+    let input = document.getElementById('search').value.toLowerCase();
+    let businessCards = document.querySelectorAll('.business-card');
+
+    businessCards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "flex" : "none";
+    });
+}
+
+// Función debounce para optimizar el buscador y evitar múltiples ejecuciones innecesarias
+function debounce(func, delay) {
+    let timeout;
+    return function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(), delay);
+    };
+}
+
+document.getElementById('search').addEventListener('keyup', debounce(searchBusinesses, 300));
 
 // JavaScript para añadir la clase 'active' poco a poco a cada categoría
-window.addEventListener("load", function() {
-    const category= document.querySelectorAll('.category');
+window.addEventListener("load", function () {
+    const categories = document.querySelectorAll('.category');
     let delay = 500;
 
     categories.forEach((category, index) => {
-      
-// Incrementing the delay to show categories one by one
-      setTimeout(() => {
-        category.classList.add('active');
-      }, delay);
-      delay += 500; // Add 500ms delay between each category
+        setTimeout(() => {
+            category.classList.add('active');
+        }, delay);
+        delay += 500; // Agrega un retraso de 500ms entre cada categoría
     });
-  });
+});
+
