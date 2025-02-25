@@ -8,10 +8,10 @@ body {
 }
 
 header {
-    display: flex;
+   
     align-items: center;
     justify-content: space-between;
-    background-image: url("5.jpg");
+    background-image: url("imagen_de_fondo.jpg");
     height: 150px;
     color: #ffffff;
     padding: 10px 20px;
@@ -102,7 +102,7 @@ nav ul li a:hover {
 .search-bar {
     margin-top: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Mueve el contenido a la derecha */
 }
 
 .search-bar form {
@@ -123,6 +123,7 @@ nav ul li a:hover {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
+
 main {
     padding: 2rem;
     max-width: 999px;
