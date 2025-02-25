@@ -43,7 +43,7 @@ function searchBusinesses() {
             }
         });
     }
-    
+
 
   // JavaScript para añadir la clase 'active' poco a poco a cada categoría
   
