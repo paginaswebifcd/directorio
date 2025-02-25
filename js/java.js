@@ -43,7 +43,20 @@ function searchBusinesses() {
             }
         });
     }
+    //Buscador dentro de categorías
+function searchBusinesses() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let businessCards = document.querySelectorAll('.business-card');
     
+    businessCards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        if (text.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
 
   // JavaScript para añadir la clase 'active' poco a poco a cada categoría
   
