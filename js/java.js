@@ -43,4 +43,17 @@ function searchBusinesses() {
         });
     }
 
+// JavaScript para añadir la clase 'active' poco a poco a cada categoría
+window.addEventListener("load", function() {
+    const category= document.querySelectorAll('.category');
+    let delay = 500;
 
+    categories.forEach((category, index) => {
+      
+// Incrementing the delay to show categories one by one
+      setTimeout(() => {
+        category.classList.add('active');
+      }, delay);
+      delay += 500; // Add 500ms delay between each category
+    });
+  });
