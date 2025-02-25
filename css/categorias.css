@@ -4,22 +4,26 @@
             gap:2rem;
         }
         .business-card{
-            background-color: #bbdaf2;
-            border-radius: 8px;
+            background-color: #bfcaf5;
+            border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 1.5rem;
             transition: transform 0.3s ease;
             margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            
+        
         }
         .business-card:hover{
             transform:translateY(-5px);
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('fondo1.jpg');
         }
         h1 {
             display: block;
@@ -53,7 +57,7 @@
         }
         .breadcrumb li a {
             text-decoration: none;
-            color: #467db8;
+            color: #92a9c2;
             font-size:18px;
 
         }
