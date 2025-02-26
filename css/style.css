@@ -210,6 +210,6 @@ footer p {
 }
 
 footer img {
-    margin-top: 100px;
-    width: 150px; /* Ajusta el tamaño si es necesario */
+    margin-top: 10px;
+    width: 250px; /* Ajusta el tamaño si es necesario */
 }
