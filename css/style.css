@@ -198,12 +198,7 @@ h2{
 
 footer {
     text-align: center;
-    padding: 50px 20px; /* Aumenta el espacio interno */
-    height: 200px; /* Define una altura fija mayor */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 20px;
     background-color: #000000;
 }
 
@@ -215,6 +210,8 @@ footer p {
 }
 
 footer img {
-    margin-top: 10px;
-    width: 400px; /* Ajusta el tamaño si es necesario */
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: auto; /* Mantiene la proporción */
+    max-height: 200px; /* Ajusta la altura máxima de la imagen si es necesario */
+    object-fit: cover;
 }
