@@ -196,19 +196,3 @@ h2{
     padding: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-footer p {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-}
-
-footer img {
-    margin-top: 10px;
-    width: 150px; /* Ajusta el tamaño si es necesario */
-}
