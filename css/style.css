@@ -206,7 +206,7 @@ footer {
 }
 .footer-img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho */
-    max-width: 600px; /* Ajusta el tamaño máximo */
+    max-width: 800px; /* Ajusta el tamaño máximo */
     display: block;
     margin: 0 auto; /* Centra la imagen */
 }
