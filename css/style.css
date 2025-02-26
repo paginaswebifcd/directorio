@@ -204,7 +204,7 @@ footer {
     width: 98.5%;
     margin-top: 20px;
 }
-.footer-img {
+.footer-imgagen {
     width: 100%; /* Hace que la imagen ocupe todo el ancho */
     max-width: 800px; /* Ajusta el tamaño máximo */
     display: block;
