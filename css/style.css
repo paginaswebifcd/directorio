@@ -212,5 +212,4 @@ footer img {
     width: 100%; /* La imagen ocupa todo el ancho */
     height: auto; /* Mantiene la proporción y evita que se deforme */
     max-height: 150px; /* Limita la altura máxima si es necesario */
-    object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
 }
