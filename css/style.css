@@ -211,7 +211,7 @@ footer p {
 
 footer img {
     width: 100%; /* La imagen ocupa todo el ancho */
-    height: auto; /* Mantiene la proporción */
+    
     max-height: 50px; /* Ajusta la altura máxima de la imagen si es necesario */
     object-fit: cover;
 }
