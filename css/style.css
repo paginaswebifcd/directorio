@@ -212,5 +212,5 @@ footer img {
     width: 100%; /* La imagen ocupa todo el ancho */
     
     max-height: 98px; /* Ajusta la altura máxima de la imagen si es necesario */
-    object-fit: cover;
+   
 }
