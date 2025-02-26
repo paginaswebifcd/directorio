@@ -196,3 +196,20 @@ h2{
     padding: 20px;
 }
 
+<<<<<<< HEAD
+=======
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 98.5%;
+    margin-top: 20px;
+}
+footer .footer-imagen {
+    width: 200px;  /* Tamaño fijo */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+>>>>>>> e7dc75d605df78822826f3abe0be25ffd5696148
