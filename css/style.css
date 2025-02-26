@@ -204,8 +204,9 @@ footer {
     width: 98.5%;
     margin-top: 20px;
 }
-.footer-imagen {
-    width: 100%; /* La imagen ocupará todo el ancho disponible */
-   display: block;
- margin: 0 auto; /* Centra la imagen */
+footer .footer-imagen {
+    width: 200px;  /* Tamaño fijo */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
 }
