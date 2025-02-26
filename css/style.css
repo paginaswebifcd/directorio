@@ -198,7 +198,12 @@ h2{
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px; /* Aumenta el espacio interno */
+    height: 200px; /* Define una altura fija mayor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
     background-color: #000000;
 }
 
