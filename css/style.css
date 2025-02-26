@@ -198,12 +198,12 @@ h2{
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #000000;
+    padding: 8px;
+    background-image: ;
 }
 
 footer p {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     margin: 0;
     color: white;
@@ -212,6 +212,6 @@ footer p {
 footer img {
     width: 100%; /* La imagen ocupa todo el ancho */
     height: auto; /* Mantiene la proporción */
-    max-height: 200px; /* Ajusta la altura máxima de la imagen si es necesario */
+    max-height: 50px; /* Ajusta la altura máxima de la imagen si es necesario */
     object-fit: cover;
 }
