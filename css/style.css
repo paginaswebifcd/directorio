@@ -198,15 +198,9 @@ h2{
 
 footer {
     text-align: center;
-<<<<<<< HEAD
     background-color: white;
     height: auto;
     width: auto;
-=======
-    padding: 10px;
-    height: 80px; /* Ajusta la altura del footer */
-    overflow: hidden; /* Evita que la imagen lo haga crecer demasiado */
->>>>>>> 4eb22785f236cd4ad7bee6a2df9d24aad77cbeb0
 }
 
 footer p {
@@ -218,12 +212,6 @@ footer p {
 
 footer img {
     width: 100%; /* La imagen ocupa todo el ancho */
-<<<<<<< HEAD
     height: 112px; /* Mantiene la proporción y evita que se deforme */
     object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
-=======
-    height: auto; /* Mantiene la proporción y evita que se deforme */
-    max-height: 60px; /* Limita la altura para que no expanda el footer */
-    object-fit: contain; /* Asegura que la imagen no se recorte */
->>>>>>> 4eb22785f236cd4ad7bee6a2df9d24aad77cbeb0
 }
