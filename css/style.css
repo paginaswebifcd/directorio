@@ -211,7 +211,6 @@ footer p {
 }
 
 footer img {
-    width: 100%; /* La imagen ocupa todo el ancho */
     height: 112px; /* Mantiene la proporción y evita que se deforme */
     object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
 }
