@@ -104,7 +104,7 @@
             background-color: white;
             height: auto;
             width: auto;
-            position: fixed;
+            position: absolute;
         }
         
         footer p {
