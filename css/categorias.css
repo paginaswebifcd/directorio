@@ -98,15 +98,14 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
         }
+
         footer {
             text-align: center;
             background-color: white;
             height: auto;
             width: auto;
-            position: fixed; 
         }
         
-        /* Estilos para los párrafos del footer */
         footer p {
             font-size: 10px;
             font-weight: bold;
@@ -114,7 +113,6 @@
             color: rgb(0, 0, 0);
         }
         
-        /* Estilos para la imagen en el footer */
         footer img {
             height: 50px; /* Mantiene la proporción y evita que se deforme */
             object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
