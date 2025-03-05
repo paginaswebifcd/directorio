@@ -9,33 +9,17 @@ body {
 }
 
 header {
-    display: flex;
+   
     align-items: center;
     justify-content: space-between;
     background-image: url("imagen_de_fondo.jpg");
-    background-size: cover;
-    background-position: center;
     height: 150px;
     color: #ffffff;
     padding: 10px 20px;
     border-bottom: 1px solid #aaa;
-    width: 100%; /* Asegura que el header ocupe el 100% del ancho */
-}
-
-/* Media Query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    header {
-        height: 120px; /* Ajusta la altura para pantallas más pequeñas */
-        padding: 10px 15px;
-    }
-}
-
-/* Media Query para pantallas aún más pequeñas (por ejemplo, móviles) */
-@media (max-width: 480px) {
-    header {
-        height: 100px; /* Ajusta la altura aún más */
-        padding: 5px 10px;
-    }
+    background-size: cover;
+    background-position: center;
+    width: auto;
 }
 
 .logo {
