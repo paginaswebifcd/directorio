@@ -103,9 +103,9 @@
             text-align: center;
             background-color: white;
             height: auto;
-            position: fixed;
+
             bottom: 0;
-            width: auto;
+            width: 100%;
         }
         
         footer p {
