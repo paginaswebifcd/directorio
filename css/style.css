@@ -152,7 +152,7 @@ h2{
 /* Estilos para las categorías */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 
@@ -213,24 +213,4 @@ footer p {
 footer img {
     height: 50px; /* Mantiene la proporción y evita que se deforme */
     object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
-}
-/*media Jquery*/
-@media (max-width: 300px) {
-    /* Estilos específicos para pantallas de 300px o menos */
-    body {
-        background-color: lightblue; /* Ejemplo de estilo */
-    }
-
-    .menu {
-        display: none; /* Ocultar el menú en pantallas de 300px o menos */
-    }
-
-    .category-item {
-        font-size: 12px; /* Ajustar el tamaño de fuente */
-        padding: 10px;   /* Ajustar el padding */
-    }
-
-    .search-bar input {
-        width: 100%; /* Asegurar que el campo de búsqueda ocupe el 100% del ancho */
-    }
 }
