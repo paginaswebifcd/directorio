@@ -103,7 +103,7 @@
             text-align: center;
             background-color: white;
             height: auto;
-            position: relative;
+            position: absolute;
             bottom: 0;
             width: 100%;
         }
