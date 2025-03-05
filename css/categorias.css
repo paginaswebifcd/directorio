@@ -98,15 +98,22 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
         }
-
         footer {
             text-align: center;
             background-color: white;
+<<<<<<< HEAD
             height: auto;
             width: auto;
             position: fixed; 
+=======
+            height: auto;  /* Ajusta su altura al contenido */
+            width: 100%;   /* Asegura que el footer ocupe todo el ancho */
+            padding: 10px 0;   /* Espaciado vertical */
+            border-top: 1px solid #aaa; /* Opcional, para una línea separadora */
+>>>>>>> 6d7c9d5b6305d94ea57e0af46d397e8f8edd7474
         }
         
+        /* Estilos para los párrafos del footer */
         footer p {
             font-size: 10px;
             font-weight: bold;
@@ -114,6 +121,7 @@
             color: rgb(0, 0, 0);
         }
         
+        /* Estilos para la imagen en el footer */
         footer img {
             height: 50px; /* Mantiene la proporción y evita que se deforme */
             object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
