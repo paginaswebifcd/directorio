@@ -99,6 +99,11 @@
             cursor: pointer;
         }
 
+        .content {
+            flex: 1; /* Hace que el contenido ocupe el espacio disponible antes del footer */
+            padding: 20px;
+        }
+
         footer {
             text-align: center;
             background-color: white;
