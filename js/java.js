@@ -64,4 +64,7 @@ window.addEventListener("load", function () {
         delay += 500; // Agrega un retraso de 500ms entre cada categoría
     });
 });
-
+// Activar o desactivar el menú en pantallas pequeñas
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('active');
+});
