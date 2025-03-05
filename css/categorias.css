@@ -98,14 +98,19 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
         }
-
         footer {
             text-align: center;
             background-color: white;
-            height: auto;
-            width: auto;
+            height: auto;  /* Permite que el alto del footer se ajuste al contenido */
+            width: 100%;   /* Asegura que el footer ocupe todo el ancho */
+            position: fixed;  /* Fija el footer al fondo de la pantalla */
+            bottom: 0;         /* Lo coloca en la parte inferior de la pantalla */
+            left: 0;           /* Lo coloca en el lado izquierdo */
+            padding: 10px 0;   /* Espaciado vertical */
+            box-shadow: 0 -1px 5px rgba(0,0,0,0.1); /* Sombra sutil para que no se mezcle con el contenido */
         }
         
+        /* Estilos para los párrafos del footer */
         footer p {
             font-size: 10px;
             font-weight: bold;
@@ -113,7 +118,14 @@
             color: rgb(0, 0, 0);
         }
         
+        /* Estilos para la imagen en el footer */
         footer img {
             height: 50px; /* Mantiene la proporción y evita que se deforme */
             object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
+        }
+        
+        /* Estilos para el contenido principal */
+        main {
+            padding: 20px;
+            padding-bottom: 60px; /* Esto es necesario para no solapar el contenido con el footer */
         }
