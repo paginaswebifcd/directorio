@@ -214,3 +214,81 @@ footer img {
     height: 50px; /* Mantiene la proporción y evita que se deforme */
     object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
 }
+/* Media Queries para hacer el diseño responsive */
+
+/* Para pantallas de hasta 1024px (tabletas) */
+@media (max-width: 1024px) {
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-item h2 {
+        font-size: 16px;
+    }
+}
+
+/* Para pantallas de hasta 768px (tabletas o móviles en horizontal) */
+@media (max-width: 768px) {
+    header .search-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .search-bar input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    nav .menu {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav .menu-item {
+        margin: 10px 0;
+    }
+
+    /* Mostrar el menú cuando se haga clic en el botón */
+    #menu-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #menu-toggle.active + .menu {
+        display: flex;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-item h2 {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas de hasta 480px (móviles en modo retrato) */
+@media (max-width: 480px) {
+    .category-item {
+        padding: 15px;
+    }
+
+    .category-item h2 {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
