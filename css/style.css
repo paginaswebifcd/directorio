@@ -19,6 +19,7 @@ header {
     border-bottom: 1px solid #aaa;
     background-size:100%;
     background-position: center;
+    background-repeat: no-repeat;
     width:auto;
 }
 
