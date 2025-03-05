@@ -101,16 +101,9 @@
         footer {
             text-align: center;
             background-color: white;
-<<<<<<< HEAD
             height: auto;
             width: auto;
             position: fixed; 
-=======
-            height: auto;  /* Ajusta su altura al contenido */
-            width: 100%;   /* Asegura que el footer ocupe todo el ancho */
-            padding: 10px 0;   /* Espaciado vertical */
-            border-top: 1px solid #aaa; /* Opcional, para una línea separadora */
->>>>>>> 6d7c9d5b6305d94ea57e0af46d397e8f8edd7474
         }
         
         /* Estilos para los párrafos del footer */
