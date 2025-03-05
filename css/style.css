@@ -19,6 +19,7 @@ header {
     border-bottom: 1px solid #aaa;
     background-size: cover;
     background-position: center;
+    width: auto;
 }
 
 .logo {
