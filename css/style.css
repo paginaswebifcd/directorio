@@ -214,3 +214,151 @@ footer img {
     height: 50px; /* Mantiene la proporción y evita que se deforme */
     object-fit: cover; /* Recorta la imagen si es necesario en lugar de deformarla */
 }
+/*Responsive*/
+/* Reseteo básico para evitar márgenes y rellenos extraños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #5994c7;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #444;
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul.menu li {
+    position: relative;
+}
+
+nav ul.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul.menu li a:hover {
+    background-color: #555;
+}
+
+nav ul.menu li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul.menu li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.category-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+/* Media Queries para hacer la página responsive */
+
+/* Para dispositivos pequeños */
+@media (max-width: 768px) {
+    nav ul.menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 60%;
+    }
+
+    footer img {
+        width: 120px;
+    }
+}
