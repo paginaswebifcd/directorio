@@ -100,7 +100,7 @@
         }
 
         .content {
-            flex: 1; /* Hace que el contenido ocupe el espacio disponible antes del footer */
+            flex: 10; /* Hace que el contenido ocupe el espacio disponible antes del footer */
             padding: 20px;
         }
 
