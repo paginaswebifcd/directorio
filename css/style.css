@@ -292,3 +292,59 @@ footer img {
         font-size: 12px;
     }
 }
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar el botón hamburguesa por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ocultar el menú de forma predeterminada */
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav .menu-item {
+        margin: 10px 0;
+    }
+
+    nav .menu-item a {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón hamburguesa */
+    }
+
+    /* Mostrar el menú cuando tiene la clase 'active' */
+    nav .menu.active {
+        display: flex;
+    }
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 768px) {
+    nav .menu {
+        display: flex; /* El menú horizontal en pantallas grandes */
+    }
+
+    nav .menu-item {
+        margin: 0 20px;
+    }
+
+    .menu-toggle {
+        display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+    }
+
+    nav .menu-item .dropdown-menu {
+        display: none; /* El submenú solo se muestra al hacer hover */
+    }
+}
