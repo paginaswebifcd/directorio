@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom right, #0052D4 50%, #FFD700 50%);
+    background: linear-gradient(135deg, #ff897e 0%, #ffbb5b 50%, #ffdf93 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -43,13 +43,22 @@ h1 {
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    height: 220px;
+    min-height: 250px;
+    transition: background 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.card:hover {
+    background: #0e3568; /* Fondo azul al pasar el cursor */
+}
+
+.card:hover p {
+    color: white; /* Letras blancas al pasar el cursor */
 }
 
 .icon {
     width: 80px;
     height: 80px;
-    border: 2px solid #000000; /* Borde negro para todos los íconos */
+    border: 2px solid #000000;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -57,12 +66,39 @@ h1 {
     font-size: 2.5rem;
 }
 
+.action-btn {
+    background: #0052D4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #003d99;
+}
+
+.card:hover .action-btn {
+    background: #FFD700; /* Fondo dorado para el botón al pasar el cursor sobre la tarjeta */
+    color: #0052D4; /* Texto azul para contraste */
+}
+
+.card:hover .icon {
+    border-color: white;
+}
+
 .card p {
     font-size: 1rem;
     color: #333;
     margin: 10px 0;
     text-align: center;
-    font-weight: bold; /* Letras en negrita */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color del texto */
 }
 
 .plus {
@@ -77,6 +113,7 @@ h1 {
     height: 30px;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .plus:hover {
