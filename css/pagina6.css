@@ -1,0 +1,108 @@
+/* Importar la fuente Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Aplicar la fuente a todo el cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFA500; /* Fondo naranja */
+    color: #003366; /* Texto general en azul oscuro */
+}
+
+/* Estilo del banner superior */
+.banner {
+    background-color: #008000; /* Verde */
+    padding: 1.5rem 0;
+}
+
+/* Estilo de las tarjetas */
+.card {
+    border: 2px solid #000; /* Bordes negros */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+    margin-bottom: 2.5rem;
+    min-height: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
+}
+
+/* Efecto hover en las tarjetas */
+.card:hover {
+    transform: scale(1.05); /* Agrandar un poco */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra más fuerte */
+}
+
+/* Padding interno */
+.card-body {
+    padding: 3rem;
+}
+
+/* Contenedor de iconos con altura fija */
+.icon-container {
+    height: 80px; /* Altura fija para uniformidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Iconos grandes */
+.icon-container i {
+    font-size: 4rem; /* Tamaño grande */
+}
+
+/* Títulos en azul claro */
+.card-title {
+    color: #006699;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para el enlace del título */
+.card-title-link {
+    text-decoration: none; /* Quitar subrayado por defecto */
+}
+
+.card-title-link:hover .card-title {
+    color: #003366; /* Cambiar color al pasar el ratón */
+    text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+}
+
+/* Lista en azul oscuro */
+.list-unstyled li {
+    color: #003366;
+    font-size: 1rem;
+}
+
+/* Botón Vía SMS mejorado */
+.btn-via-sms {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 0; /* Rectangular */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-via-sms:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para "(sin certificado)" */
+.sin-certificado {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    font-size: 1rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Asegurar que las tarjetas tengan altura uniforme */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
