@@ -85,7 +85,7 @@ h1 {
 
 .card:hover .action-btn {
     background: #FFD700; /* Fondo dorado para el botón al pasar el cursor sobre la tarjeta */
-    color: #0052D4; /* Texto azul para contraste */
+    color: #000000; /* Texto azul para contraste */
 }
 
 .card:hover .icon {
@@ -93,7 +93,7 @@ h1 {
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #333;
     margin: 10px 0;
     text-align: center;
