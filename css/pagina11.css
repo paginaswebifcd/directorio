@@ -19,7 +19,7 @@ body {
 }
 
 .left-side {
-    background-color: #002A5A;
+    background: rgb(5, 10, 48);
     color: white;
     padding: 40px;
     width: 40%;
@@ -29,19 +29,22 @@ body {
     align-items: flex-start;
 }
 
-.left-side h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.logo-container {
+    text-align: center; /* Centra horizontalmente */
+}
+
+.logo {
+    width: 100px; /* Tamaño de la imagen */
+    transform: translate(100px);
+}
+
+.titulo {
+    font-family: 'Roca One', sans-serif; /* Aplica la fuente Roca One */
+    font-size: 72px; /* Tamaño de fuente */
 }
 
 .left-side p {
     font-size: 1.5em;
-    font-style: italic;
-}
-
-.left-side .logo {
-    width: 100px;
-    margin-bottom: 20px;
 }
 
 .right-side {
@@ -49,7 +52,7 @@ body {
 }
 
 .right-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 90%; /* Reduce ligeramente el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
 }
