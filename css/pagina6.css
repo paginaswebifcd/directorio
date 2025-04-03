@@ -1,5 +1,5 @@
-/* Importar las fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap');
+/* Importar la fuente Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 /* Aplicar la fuente a todo el cuerpo */
 body {
@@ -10,13 +10,13 @@ body {
 
 /* Estilo del banner superior */
 .banner {
-    background: linear-gradient(45deg, #006400, #32CD32, #FFD700); /* Gradiente verde con toque amarillo */
-    padding: 2rem 0;
+    background-color: #008000; /* Verde sólido */
+    padding: 1.5rem 0;
     position: relative;
     overflow: hidden;
 }
 
-/* Efecto de fondo animado (opcional) */
+/* Patrón geométrico de triángulos */
 .banner::before {
     content: '';
     position: absolute;
@@ -24,43 +24,42 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-    opacity: 0.5;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    opacity: 0.3;
 }
 
-/* Icono del banner */
-.banner-icon {
-    font-size: 3rem;
-    color: #FFD700; /* Amarillo dorado */
-    transition: transform 0.5s ease;
-}
-
-/* Animación al pasar el ratón sobre el icono */
-.banner-icon:hover {
-    transform: rotate(360deg);
-}
-
-/* Título del banner */
+/* Título del banner con efecto neón */
 .banner-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    transition: color 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 0, 0.5); /* Efecto neón */
+    transition: text-shadow 0.3s ease;
 }
 
-/* Subtítulo del banner */
+/* Efecto hover en el título */
+.banner-title:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(0, 255, 0, 1);
+}
+
+/* Subtítulo del banner con animación de fade-in */
 .banner-subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #FFD700; /* Amarillo dorado */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    transition: color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
 }
 
-/* Efecto hover en el título y subtítulo */
-.banner-title:hover, .banner-subtitle:hover {
-    color: #E0FFFF; /* Color cian claro */
+/* Animación de fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Estilo de las tarjetas */

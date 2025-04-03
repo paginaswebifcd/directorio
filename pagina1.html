@@ -3,109 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de Trámites</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página de Inicio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Fondo con el color #f8f8f8 */
+            height: 100vh;
+            color: black; /* Cambié el color del texto a negro para mejor contraste */
+        }
+
         .container {
             display: flex;
-            width: 90%;
-            max-width: 1200px;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            height: 100%;
+            padding: 20px;
         }
-        .left-section {
+
+        .left-side {
             flex: 1;
             display: flex;
             justify-content: center;
-        }
-        .left-section img {
-            max-width: 100%;
-            height: auto;
-        }
-        .center-text {
-            flex: 2;
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            width: 50%;
         }
-        .center-text p {
-            margin: 10px 0;
-        }
-        .right-section {
+
+        .right-side {
             flex: 1;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start; /* Alinea el contenido hacia la parte superior */
+            width: 50%;
+            padding-top: 20px;
+            flex-direction: column; /* Alinea los elementos verticalmente */
         }
-        .button {
-            background-color: #fdd835;
-            padding: 15px 30px;
-            font-size: 20px;
-            font-weight: bold;
+
+        .my-button {
+            background-color: yellow; /* Fondo amarillo */
+            color: black; /* Texto en negro para buen contraste */
             border: none;
+            padding: 40px 60px; /* Botón mucho más grande */
+            font-size: 30px; /* Tamaño de fuente más grande */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
             border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            margin-top: -100px; /* Ajuste para mover el botón mucho más arriba */
         }
-        .info {
-            text-align: center;
-            margin-top: 20px;
+
+        .my-button:hover {
+            background-color: #ffcc00; /* Un amarillo más oscuro cuando se pasa el mouse */
         }
-        .logos img {
-            width: 80px;
-            margin: 10px;
+
+        .image {
+            width: 80%; /* Hacemos la imagen un 80% de la mitad de la página */
+            height: auto;
+            border-radius: 8px;
         }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .center-text {
-                font-size: 20px;
-            }
-            .button {
-                font-size: 18px;
-            }
+
+        .image-container {
+            display: flex;
+            justify-content: center; /* Centra la imagen horizontalmente */
+            align-items: center; /* Centra la imagen verticalmente */
+            margin-top: 30px; /* Ajuste el espacio entre el botón y la imagen */
+        }
+
+        .image-container img {
+            width: 400px; /* Tamaño mucho más grande para la imagen */
+            height: auto;
+            border-radius: 8px;
+            background-color: transparent; /* Fondo transparente para la imagen */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-section">
-            <img src="imagenes/pagina1mujer.png" alt="Ilustración trámites">
+        <div class="left-side">
+            <img src="images/pagina1_2.png" alt="Imagen de inicio" class="image">
         </div>
-        <div class="center-text">
-            <p>Realizar trámites</p>
-            <p>nunca fue tan</p>
-            <p>sencillo</p>
-        </div>
-        <div class="right-section">
-            <button class="button">Centro de trámites</button>
-        </div>
-    </div>
-    <div class="info">
-        <p>Creado por <strong>Punto Vuela</strong> La Guardia de Jaén</p>
-        <p>Con la participación de alumnado en prácticas del <strong>Programa de Empleo y Formación</strong> 23/2023/PE/0001</p>
-        <div class="logos">
-            <img src="logo1.png" alt="Junta de Andalucía">
-            <img src="logo2.png" alt="Ministerio de Trabajo">
-            <img src="logo3.png" alt="Programa de Empleo">
+        <div class="right-side">
+            <button class="my-button" onclick="window.location.href='index2.html'">
+                Centro de Trámites
+            </button>
+            <!-- Contenedor de la imagen centrada debajo del botón -->
+            <div class="image-container">
+                <img src="images/Tramites.png" alt="Imagen 1">
+            </div>
         </div>
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

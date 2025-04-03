@@ -31,16 +31,22 @@ h1 {
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    min-height: 150px; /* Asegura que todas las tarjetas tengan una altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card img, .contact-card img {
-    width: 50px;
-    height: 100px;
+    width: 80px; /* Solo definimos el ancho */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
     margin-bottom: 10px;
 }
 
 .card p, .contact-card p {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
     margin: 0;
     color: #333;
 }
@@ -79,4 +85,54 @@ h1 {
     padding: 20px;
     margin: 0 auto;
     max-width: 300px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+
+    h1 {
+        font-size: 40px; /* Tamaño de fuente ajustado para tablets */
+    }
+
+    .card p, .contact-card p {
+        font-size: 18px; /* Reducimos el tamaño de la fuente */
+    }
+
+    .contact-card {
+        flex-direction: column;
+        gap: 10px; /* Ajustamos el espacio entre los elementos */
+        max-width: 100%; /* Permitimos que ocupe el 100% del ancho */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    h1 {
+        font-size: 30px; /* Tamaño de fuente ajustado para móviles */
+    }
+
+    .card p, .contact-card p {
+        font-size: 16px; /* Reducimos el tamaño de la fuente */
+    }
+
+    .contact-card {
+        flex-direction: column;
+        gap: 10px; /* Ajustamos el espacio entre los elementos */
+        max-width: 100%; /* Permitimos que ocupe el 100% del ancho */
+    }
+
+    .plus-btn {
+        width: 25px; /* Reducimos el tamaño del botón */
+        height: 25px;
+        font-size: 14px;
+    }
 }
