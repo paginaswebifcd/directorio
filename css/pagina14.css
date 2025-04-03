@@ -43,49 +43,18 @@ h1 {
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    height: 200px;
+    height: 220px;
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #FF0000;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000000; /* Borde negro para todos los íconos */
     border-radius: 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.phone {
-    background-image: url('https://img.icons8.com/ios-filled/50/FF0000/phone.png');
-}
-
-.calendar {
-    background-image: url('https://img.icons8.com/ios-filled/50/00FF00/calendar.png');
-    border-color: #00FF00;
-}
-
-.cancel {
-    background-image: url('https://img.icons8.com/ios-filled/50/FF0000/cancel.png');
-}
-
-.debt {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/money-bag.png');
-    border: none;
-}
-
-.subsidy {
-    background-image: url('https://img.icons8.com/ios-filled/50/FF0000/heart-with-pulse.png');
-}
-
-.service {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/medical-doctor.png');
-    border: none;
-}
-
-.certificate {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/certificate.png');
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
 }
 
 .card p {
@@ -93,6 +62,7 @@ h1 {
     color: #333;
     margin: 10px 0;
     text-align: center;
+    font-weight: bold; /* Letras en negrita */
 }
 
 .plus {
