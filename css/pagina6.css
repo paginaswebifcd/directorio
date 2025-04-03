@@ -1,5 +1,5 @@
-/* Importar la fuente Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap');
 
 /* Aplicar la fuente a todo el cuerpo */
 body {
@@ -10,8 +10,57 @@ body {
 
 /* Estilo del banner superior */
 .banner {
-    background-color: #008000; /* Verde */
-    padding: 1.5rem 0;
+    background: linear-gradient(45deg, #006400, #32CD32, #FFD700); /* Gradiente verde con toque amarillo */
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo animado (opcional) */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.5;
+}
+
+/* Icono del banner */
+.banner-icon {
+    font-size: 3rem;
+    color: #FFD700; /* Amarillo dorado */
+    transition: transform 0.5s ease;
+}
+
+/* Animación al pasar el ratón sobre el icono */
+.banner-icon:hover {
+    transform: rotate(360deg);
+}
+
+/* Título del banner */
+.banner-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    transition: color 0.3s ease;
+}
+
+/* Subtítulo del banner */
+.banner-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #FFD700; /* Amarillo dorado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover en el título y subtítulo */
+.banner-title:hover, .banner-subtitle:hover {
+    color: #E0FFFF; /* Color cian claro */
 }
 
 /* Estilo de las tarjetas */
