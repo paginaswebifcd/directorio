@@ -1,0 +1,99 @@
+/* Estilos personalizados para el tema Heroic Features */
+
+/* Fondo general del cuerpo */
+body {
+    background-color: #f8f9fa; /* Fondo claro de Bootstrap (bg-light) */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Aseguramos que la sección tenga un padding superior */
+.pt-4 {
+    padding-top: 2rem !important;
+}
+
+/* Contenedor principal con padding ajustado */
+.container {
+    max-width: 1140px; /* Ancho máximo típico de Bootstrap para contenedores */
+}
+
+/* Ajuste del espaciado entre columnas */
+@media (min-width: 1200px) {
+    .gx-lg-5 {
+        --bs-gutter-x: 3rem; /* Espaciado entre columnas */
+    }
+    .px-lg-5 {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+    }
+}
+
+/* Estilo de las tarjetas */
+.card {
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    border: none; /* Sin bordes */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.card-body {
+    padding: 2rem !important; /* Padding uniforme */
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .card-body {
+        padding: 3rem !important; /* Padding más grande en pantallas grandes */
+    }
+}
+
+/* Contenedor del ícono (feature) */
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem; /* Tamaño más grande para coincidir con la imagen */
+    height: 4.5rem;
+    font-size: 2.25rem; /* Ícono más grande */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente azul */
+    color: #fff;
+    border-radius: 0.5rem; /* Bordes redondeados */
+    margin-bottom: 1.5rem;
+}
+
+/* Ajuste del margen superior negativo para el ícono */
+.mt-n4 {
+    margin-top: -2rem !important; /* Sube el ícono para que sobresalga */
+}
+
+/* Estilo del título */
+h2.fs-4 {
+    font-size: 1.25rem; /* Tamaño del título */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+/* Estilo del texto descriptivo */
+.card-body p {
+    font-size: 0.95rem; /* Tamaño del texto más pequeño */
+    color: #6c757d; /* Color gris de Bootstrap */
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Aseguramos que las tarjetas tengan altura uniforme */
+.h-100 {
+    height: 100% !important;
+}
+
+/* Ajuste del margen inferior entre filas */
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
