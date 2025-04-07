@@ -1,41 +1,21 @@
-/* 
-  ========================================
-  RESET BÁSICO
-  ========================================
-*/
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*
-  ========================================
-  TIPOGRAFÍA BASE
-  ========================================
-*/
 body {
   font-family: 'Merriweather', serif;
   background-color: #ffdc00;
   color: #333;
 }
 
-/*
-  ========================================
-  CONTENEDOR PRINCIPAL
-  ========================================
-*/
 .container {
   display: flex;
   flex-direction: row;
-  height: 101vh;
+  height: 100vh;
 }
 
-/*
-  ========================================
-  SECCIÓN IZQUIERDA
-  ========================================
-*/
 .left-section {
   width: 50%;
   background-color: #ffdc00;
@@ -45,6 +25,7 @@ body {
   justify-content: center;
   position: relative;
   padding: 2rem;
+  text-align: center;
 }
 
 .logo-circle {
@@ -75,33 +56,89 @@ body {
   color: #000;
 }
 
-/*
-  ========================================
-  SECCIÓN DERECHA ADAPTADA
-  ========================================
-*/
 .right-section {
   width: 50%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Pega la imagen arriba */
-  padding-top: 2rem; /* Opcional: espacio arriba */
+  align-items: flex-start;
+  padding-top: 2rem;
   overflow: hidden;
   border-top-left-radius: 300px;
-    border-bottom-left-radius: 300px;
-    border-top-right-radius: 0;
-    transform: rotate(270deg); /* Rota la imagen a vertical */    
-    border-bottom-right-radius: 0;
+  border-bottom-left-radius: 300px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: rotate(270deg);
 }
 
 .right-section img {
   height: auto;
-  width: 100%; /* Ajusta el ancho al contenedor */
-  max-width: 100%; /* Asegura que la imagen no se expanda más allá del contenedor */
+  width: 100%;
+  max-width: 100%;
   object-fit: contain;
   display: block;
-  transform: rotate(90deg); /* Si es necesario para la orientación */
+  transform: rotate(90deg);
+}
+
+/* --------- Responsive --------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .left-section h1 {
+    font-size: 3rem;
+  }
+
+  .left-section h2 {
+    font-size: 2rem;
+  }
+
+  .right-section {
+    transform: none;
+    border-radius: 0;
+    padding-top: 1rem;
+  }
+
+  .right-section img {
+    transform: none;
+    width: 100%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .logo-circle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .left-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .left-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .left-section {
+    padding: 1rem;
+  }
+
+  .right-section {
+    padding-top: 1rem;
+  }
 }
 
 
