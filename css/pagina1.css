@@ -127,7 +127,7 @@ body {
     transform: translateY(-50px);  /* Mueve la imagen hacia arriba 50px adicional */
 }
 body {
-  overflow-x: hidden;  /* Elimina el scroll horizontal */
+    overflow-x: hidden;  /* Elimina el scroll horizontal */
 }
   }
 
