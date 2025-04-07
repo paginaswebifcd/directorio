@@ -75,6 +75,9 @@ body {
 }
 
 /* 🔽 RESPONSIVE STYLES */
+.elemento {
+  background-image: url('../images/movil.png');
+}
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -94,14 +97,14 @@ body {
   }
 
   .image {
-    width: 90%;
+    width: 900%;
   }
 }
 
 @media (max-width: 600px) {
   .my-button {
     padding: 15px 25px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .right-side {
@@ -128,6 +131,9 @@ body {
 }
 body {
     overflow-x: hidden;  /* Elimina el scroll horizontal */
+    
+    width: 100%;  /* Asegura que el body no sea más ancho que la pantalla */
+  }
 }
   }
 
