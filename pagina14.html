@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trámites Agencia Tributaria</title>
-    <link rel="stylesheet" href="css/pagina14.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trámites</title>
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/pagina10.css" />
+  <!-- Archivo JavaScript -->
+  <script src="js/pagina10.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>TRÁMITES</h1>
-        <div class="grid">
-            <div class="card">
-                <div class="icon phone">📞</div>
-                <a class="action-btn" href="https://www.agenciatributaria.es/emergencia">Info</a>
-                <p>Número de contancto</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon calendar">📅</div>
-                <a class="action-btn" href="https://www2.agenciatributaria.gob.es/wlpl/TOCP-MUTE/internet/identificacion">Info</a>
-                <p>Cita previa</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon cancel">❌</div>
-                <a class="action-btn" href="https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/cita-previa/cita-previa-solicitud.html">Info</a>
-                <p>Anular cita previa</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon debt">💰</div>
-                <a class="action-btn" href="https://sede.agenciatributaria.gob.es/static_files/common/html/selector_acceso/SelectorAccesos.html?ref=%2Fwlpl%2FSRVO-JDIT%2FConsultaDdas%3Ffaccion%3DCONS_DDAS&aut=CP">Info</a>
-                <p>Consultar deudas</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon subsidy">❤️</div>
-                <a class="action-btn" href="https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/baja-prestacion.html">Info</a>
-                <p>Prestación o subsidio (baja)</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon service">🩺</div>
-                <a class="action-btn" href="https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/consultas.html">Info</a>
-                <p>Prestación (consulta)</p>
-                <button class="plus">+</button>
-            </div>
-            <div class="card">
-                <div class="icon certificate">📜</div>
-                <a class="action-btn" href="https://sede.sepe.gob.es/DServiciosPrestanetWEB/CertificadosPrestaWeb.do">Info</a>
-                <p>Certificado prestaciones</p>
-                <button class="plus">+</button>
-            </div>
+  <div class="contenedor-principal">
+    <!-- Sidebar lateral -->
+    <aside class="sidebar">
+      <h1>TRÁMITES</h1>
+    </aside>
+
+    <!-- Sección de tarjetas -->
+    <section class="seccion-tarjetas">
+      
+      <!-- Tarjeta 1: Teléfono -->
+      <a href="tel:955625695" class="tarjeta">
+        <div class="icono">
+          <img src="images/1.png" alt="Icono teléfono" />
         </div>
-    </div>
+        <div class="texto">
+          <p class="titulo">
+            Número de emergencia<br />
+            <strong>955 625 695</strong>
+          </p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 2: Cita previa -->
+      <a href="https://saempleo.es/ags/citaprevia/" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/2.png" alt="Icono calendario" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Cita previa</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 3: Anulación cita -->
+      <a href="https://ws054.juntadeandalucia.es/extsso/realms/agsae/protocol/openid-connect/registrations?response_type=code&client_id=fad&scope=openid&redirect_uri=https://ws137.juntadeandalucia.es/ags/fad/" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/3.png" alt="Icono inscripción" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Anular cita previa</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 4: Consultar deudas -->
+      <a href="https://ws054.juntadeandalucia.es/extsso/realms/agsae/login-actions/authenticate?execution=ced06c91-db83-4d01-b6c7-af8f81c21e78&client_id=apd&tab_id=ujpAhGbiqE8" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/4.png" alt="Icono renovar" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Consultar dedudas</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 5: Prestación o subsidio (baja) -->
+      <a href="https://www.juntadeandalucia.es/temas/trabajar/desempleo/prestaciones.html" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/5.png" alt="Icono prestación o subsidio (baja)" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Consultar dedudas</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 6: Prestación o subsidio (baja) -->
+      <a href="https://www.juntadeandalucia.es/temas/trabajar/desempleo/prestaciones.html" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/6.png" alt="Icono prestación (consulta)" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Prestación o subsidio (baja)</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 7: Prestación (consulta) -->
+      <a href="https://www.juntadeandalucia.es/temas/trabajar/desempleo/prestaciones.html" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/7.png" alt="Icono certificado prestaciones" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Prestación (consulta)</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+
+      <!-- Tarjeta 7: Certificado prestaciones -->
+      <a href="https://www.juntadeandalucia.es/temas/trabajar/desempleo/prestaciones.html" target="_blank" class="tarjeta">
+        <div class="icono">
+          <img src="images/7.png" alt="Icono certificado prestaciones" />
+        </div>
+        <div class="texto">
+          <p class="titulo"><strong>Certificado prestaciones</strong></p>
+        </div>
+        <span class="sello-mas">+</span>
+      </a>
+    </section>
+  </div>
 </body>
 </html>
