@@ -38,13 +38,14 @@ body {
   background-color: yellow;
   color: black;
   border: none;
-  padding: 40px 60px;
-  font-size: 30px;
+  padding: 50px 80px;
+  font-size: 25px;
   text-align: center;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: -200px;
+  text-decoration: none; /* Asegura que no tenga subrayado */
+  display: inline-block;
 }
 
 .my-button:hover {
@@ -75,9 +76,6 @@ body {
 }
 
 /* 🔽 RESPONSIVE STYLES */
-.elemento {
-  background-image: url('../images/movil.png');
-}
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -88,6 +86,8 @@ body {
     margin-bottom: 0;
     padding: 30px 50px;
     font-size: 24px;
+    z-index: 10; /* Asegura que el botón esté por encima de otros elementos */
+    position: relative; /* Es necesario para que el z-index funcione */
   }
 
   .image-container img {
@@ -97,14 +97,16 @@ body {
   }
 
   .image {
-    width: 900%;
+    width: 90%;
   }
 }
 
 @media (max-width: 600px) {
   .my-button {
     padding: 15px 25px;
-    font-size: 14px;
+    font-size: 16px;
+    z-index: 10; /* Asegura que el botón esté por encima */
+    position: relative; /* Necesario para el z-index */
   }
 
   .right-side {
@@ -116,26 +118,21 @@ body {
   }
 
   .image-container img {
-    transform: none; /* solo quitamos el desplazamiento en pantallas pequeñas */
-  }
-  .image-container img {
+    transform: none;
     width: 100%;
     max-width: 700px;
     height: auto;
     border-radius: 8px;
     background-color: transparent;
-    position: relative;  /* Agregar esta propiedad para que left y top funcionen */
-    margin-top: -50px;  /* Esto mueve la imagen hacia arriba */
-    left: -80px;  /* Mueve la imagen hacia la izquierda */
-    transform: translateY(-50px);  /* Mueve la imagen hacia arriba 50px adicional */
-}
-body {
-    overflow-x: hidden;  /* Elimina el scroll horizontal */
-    
-    width: 100%;  /* Asegura que el body no sea más ancho que la pantalla */
+    position: relative;
+    margin-top: -50px;
+    left: -80px;
+    transform: translateY(-50px);
   }
 }
-  }
+
+
+
 
 
  
