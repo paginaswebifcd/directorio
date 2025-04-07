@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffeb3b; /* Fondo amarillo claro */
+    background-color: #ffeb3b;
     margin: 0;
     padding: 20px;
 }
@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    color: #1a237e; /* Azul oscuro para el título */
+    color: #1a237e;
     font-size: 50px;
     margin-bottom: 20px;
 }
@@ -31,16 +31,23 @@ h1 {
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    min-height: 150px; /* Asegura que todas las tarjetas tengan una altura mínima */
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Nueva línea */
+    cursor: pointer; /* Nueva línea */
+}
+
+.card:hover, .contact-card:hover { /* Nuevo bloque */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card img, .contact-card img {
-    width: 80px; /* Solo definimos el ancho */
-    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    width: 80px;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -56,7 +63,6 @@ h1 {
     color: #1a237e;
 }
 
-/* Sello del + como enlace */
 .sello-mas {
     position: absolute;
     top: 15px;
@@ -74,11 +80,12 @@ h1 {
     border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     transition: background-color 0.3s;
-  }
+    cursor: pointer;
+}
   
-  .sello-mas:hover {
+.sello-mas:hover {
     background-color: #ff4a3d;
-  }
+}
 
 .contact-card {
     display: flex;
@@ -90,82 +97,86 @@ h1 {
     max-width: 300px;
 }
 
-
-/* Media Queries for Responsiveness */
-
-/* Tablets and smaller screens */
+/* Media Queries */
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     h1 {
-        font-size: 40px; /* Tamaño de fuente ajustado para tablets */
+        font-size: 40px;
     }
 
     .card p, .contact-card p {
-        font-size: 18px; /* Reducimos el tamaño de la fuente */
+        font-size: 18px;
     }
 
     .contact-card {
         flex-direction: column;
-        gap: 10px; /* Ajustamos el espacio entre los elementos */
-        max-width: 100%; /* Permitimos que ocupe el 100% del ancho */
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .card:hover, .contact-card:hover { /* Efecto para tablets */
+        transform: none;
     }
 }
 
-/* Mobile phones */
 @media (max-width: 480px) {
     .grid {
-        grid-template-columns: 1fr; /* Una columna */
+        grid-template-columns: 1fr;
     }
 
     h1 {
-        font-size: 30px; /* Tamaño de fuente ajustado para móviles */
+        font-size: 30px;
     }
 
     .card p, .contact-card p {
-        font-size: 16px; /* Reducimos el tamaño de la fuente */
+        font-size: 16px;
     }
 
     .contact-card {
         flex-direction: column;
-        gap: 10px; /* Ajustamos el espacio entre los elementos */
-        max-width: 100%; /* Permitimos que ocupe el 100% del ancho */
+        gap: 10px;
+        max-width: 100%;
     }
 
     .plus-btn {
-        width: 25px; /* Reducimos el tamaño del botón */
+        width: 25px;
         height: 25px;
         font-size: 14px;
     }
+
+    .card:hover, .contact-card:hover { /* Efecto para móviles */
+        transform: none;
+    }
 }
 
-/* Para móviles */
 @media (max-width: 768px) {
     .sidebar {
-      width: 100%;
-      padding: 20px;
+        width: 100%;
+        padding: 20px;
     }
   
     .sidebar h1 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
   
     .seccion-tarjetas {
-      width: 100%;
-      padding: 20px;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
   
     .tarjeta {
-      padding: 20px;
+        padding: 20px;
     }
   
     .sello-mas {
-      width: 25px;
-      height: 25px;
-      font-size: 1.3rem;
+        width: 25px;
+        height: 25px;
+        font-size: 1.3rem;
     }
-  }
+}
+
   
