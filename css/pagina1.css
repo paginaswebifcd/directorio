@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  height: 100vh;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.right-side {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.my-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 40px 60px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: -200px;
+}
+
+.my-button:hover {
+  background-color: #ffcc00;
+}
+
+.image {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 8px;
+  background-color: transparent;
+  margin-top: -50px;
+  transform: translateX(-200px);
+}
+
+/* 🔽 RESPONSIVE STYLES */
+.elemento {
+  background-image: url('../images/movil.png');
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .my-button {
+    margin-bottom: 0;
+    padding: 30px 50px;
+    font-size: 24px;
+  }
+
+  .image-container img {
+    transform: translateX(0);
+    max-width: 90%;
+    margin-top: 0;
+  }
+
+  .image {
+    width: 900%;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-button {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+
+  .right-side {
+    gap: 20px;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-container img {
+    transform: none; /* solo quitamos el desplazamiento en pantallas pequeñas */
+  }
+  .image-container img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative;  /* Agregar esta propiedad para que left y top funcionen */
+    margin-top: -50px;  /* Esto mueve la imagen hacia arriba */
+    left: -80px;  /* Mueve la imagen hacia la izquierda */
+    transform: translateY(-50px);  /* Mueve la imagen hacia arriba 50px adicional */
+}
+body {
+    overflow-x: hidden;  /* Elimina el scroll horizontal */
+    
+    width: 100%;  /* Asegura que el body no sea más ancho que la pantalla */
+  }
+}
+  }
+
+
+ 
