@@ -1,58 +1,151 @@
+/* Base reset y estilos generales */
 body {
     margin: 0;
+    padding: 0;
     font-family: sans-serif;
     background-color: #f0f0f0;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px;
-    height: 600px;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-direction: column-reverse;
 }
 
+/* SECCIÓN IZQUIERDA */
 .left-side {
     background: rgb(5, 10, 48);
     color: white;
-    padding: 40px;
-    width: 40%;
+    padding: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .logo-container {
-    text-align: center; /* Centra horizontalmente */
+    text-align: center;
+    margin: 0 auto; /* Elimina margen superior */
 }
 
 .logo {
-    width: 100px; /* Tamaño de la imagen */
-    transform: translate(100px);
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .titulo {
-    font-family: 'Roca One', sans-serif; /* Aplica la fuente Roca One */
-    font-size: 72px; /* Tamaño de fuente */
+    font-family: 'Roca One', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    white-space: pre-line;
+    margin: 15px 0 0 0;
+    line-height: 1.2;
 }
 
 .left-side p {
-    font-size: 1.5em;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 8px 0 15px;
+    line-height: 1.4;
 }
 
+/* Alineación especial para h1 y p */
+.text-container {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SECCIÓN DERECHA */
 .right-side {
-    width: 60%;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
 }
 
 .right-side img {
-    width: 90%; /* Reduce ligeramente el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+/* MEDIA QUERIES - ESTRUCTURA ORIGINAL CON ALINEACIÓN */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left-side {
+        width: 40%;
+        padding: 30px;
+    }
+
+    .right-side {
+        width: 60%;
+        min-height: 100vh;
+    }
+
+    .logo-container {
+        margin: 15px 0 0 4px; /* Ajusta el margen superior */
+    }
+
+    .logo {
+        width: 160px;
+        margin-left: 0;
+    }
+
+    .text-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .titulo {
+        font-size: 3rem;
+        text-align: left;
+        margin: 0 0 0 50px; /* Elimina margen superior */
+        width: calc(100% - 50px);
+    }
+
+    .left-side p {
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 8px 0 0 50px;
+        width: calc(100% - 50px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .titulo {
+        font-size: 4.5rem;
+    }
+
+    .left-side p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    .left-side p {
+        font-size: 1rem;
+    }
+
+    .text-container {
+        padding: 0 10px;
+    }
+}
+

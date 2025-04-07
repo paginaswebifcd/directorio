@@ -1,0 +1,167 @@
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #014757;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .left-panel {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            text-align: center;
+            margin-right: 5%;
+        }
+        .right-panel {
+            flex: 1;
+            background-color: white;
+            color: black;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 10%;
+        }
+        h2 {
+            color: rgb(253, 207, 0);
+            font-size: 45px;
+            font-style: italic;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .title {
+            
+            font-size: 60px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            margin-top: 10%;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button {
+            display: block;
+            padding: 15px;
+            background-color: lightblue;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width: 80%;
+        }
+        .button:hover {
+            background-color: #1791ee;
+        }
+        .entities {
+            font-size: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .entities img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        .button1 {
+            display: flex;
+            align-items: center; /* Centra verticalmente */
+            gap: 10px; /* Espacio entre el botón y el icono */
+          }
+
+          .button1 .fas.fa-clock {
+            color: #fcfcfc;
+            font-size: 30px;
+          }
+          .button2{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .button2 .fa-solid.fa-file-excel {
+            color: #fcfcfc;
+            font-size: 30px;}
+
+                .button3{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              .button3 .fa-solid.fa-question {
+                color: #fcfcfc;
+                font-size: 30px;}
+
+                @media (min-width: 768px) {
+                    .container {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                    }
+                
+                    .left-panel {
+                        width: 35%;
+                        text-align: left;
+                    }
+                
+                    .right-panel {
+                        width: 60%;
+                    }
+                
+                    .title {
+                        font-size: 60px;
+                        text-align: center;
+                    }
+                
+                    .header {
+                        justify-content: flex-start;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .title {
+                        font-size: 35px;
+                    }
+                
+                    .button {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                
+                    .button1 .fas.fa-clock,
+                    .button2 .fa-solid.fa-file-excel,
+                    .button3 .fa-solid.fa-question {
+                        font-size: 24px;
+                    }
+                
+                    .right-panel {
+                        padding: 20px;
+                    }
+                }
+
+
+      
