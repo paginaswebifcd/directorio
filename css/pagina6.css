@@ -29,17 +29,6 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-.banner-subtitle {
-    font-size: 1.2rem;
-    color: #ffffff; /* Blanco en lugar de amarillo para coherencia */
-    opacity: 0.9;
-}
-
-/* Ajuste del ícono del banner */
-.banner .bi-shield-fill {
-    font-size: 3rem; /* Tamaño más prominente */
-}
-
 /* Contenedor principal */
 .container.my-5 {
     padding: 40px 15px; /* Espaciado inspirado en el ejemplo */
@@ -138,10 +127,6 @@ body {
         font-size: 2rem;
     }
 
-    .banner-subtitle {
-        font-size: 1rem;
-    }
-
     .card-body {
         padding: 1.5rem;
     }
@@ -154,10 +139,6 @@ body {
 
     .banner-title {
         font-size: 1.8rem;
-    }
-
-    .banner-subtitle {
-        font-size: 0.9rem;
     }
 
     .container.my-5 {
