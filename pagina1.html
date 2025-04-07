@@ -40,7 +40,8 @@
             justify-content: center;
             align-items: flex-start; /* Alinea el contenido hacia la parte superior */
             width: 50%;
-            padding-top: 20px; /* Ajusta la distancia desde la parte superior */
+            padding-top: 20px;
+            flex-direction: column; /* Alinea los elementos verticalmente */
         }
 
         .my-button {
@@ -55,7 +56,7 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: -200px; /* Ajuste para mover el botón mucho más arriba */
+            margin-top: -100px; /* Ajuste para mover el botón mucho más arriba */
         }
 
         .my-button:hover {
@@ -67,6 +68,21 @@
             height: auto;
             border-radius: 8px;
         }
+
+        .image-container {
+            display: flex;
+            justify-content: center; /* Centra la imagen horizontalmente */
+            align-items: center; /* Centra la imagen verticalmente */
+            margin-top: 30px; /* Ajuste el espacio entre el botón y la imagen */
+        }
+
+        .image-container img {
+            width: 700px; /* Imagen mucho más grande (ajustado a 700px) */
+            height: auto;
+            border-radius: 8px;
+            background-color: transparent; /* Fondo transparente para la imagen */
+            margin-right: 50px; /* Empuja la imagen ligeramente a la derecha */
+        }
     </style>
 </head>
 <body>
@@ -75,13 +91,22 @@
             <img src="images/pagina1_2.png" alt="Imagen de inicio" class="image">
         </div>
         <div class="right-side">
-            <button class="my-button">
+            <button class="my-button" onclick="window.location.href='index2.html'">
                 Centro de Trámites
             </button>
+            <!-- Contenedor de la imagen centrada debajo del botón -->
+            <div class="image-container">
+                <img src="images/Tramites.png" alt="Imagen 1">
+            </div>
         </div>
     </div>
 </body>
 </html>
+
+
+
+
+
 
 
 
