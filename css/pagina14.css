@@ -78,7 +78,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: #ff6f61;
+    background-color: #ffa361;
     color: #ffffff;
     width: 30px;
     height: 30px;
@@ -94,7 +94,7 @@
   }
   
   .sello-mas:hover {
-    background-color: #ff4a3d;
+    background-color: #5434f5;
   }
   
   /* RESPONSIVE DESIGN */

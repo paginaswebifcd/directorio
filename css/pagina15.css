@@ -6,86 +6,64 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #003087; /* Fondo azul oscuro de la DGT */
-    color: white;
+    background-color: white; /* Fondo blanco como en la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Contenedor principal */
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Sección izquierda */
-.left-section {
-    background-color: white;
-    padding: 20px;
-    margin-right: 20px;
-    border: 2px solid #003087;
-}
-
-.logo-left {
+/* Sección del logo */
+.logo-section {
     display: flex;
     align-items: center;
 }
 
-.cross-symbol {
-    font-size: 40px;
-    color: #003087;
+/* Símbolo estilizado */
+.symbol {
+    position: relative;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
-    transform: rotate(45deg); /* Simulamos el símbolo del logo */
 }
 
+.vertical-bar {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background-color: #003087; /* Azul oscuro de la DGT */
+    top: 0;
+    left: 15px;
+    border-radius: 5px;
+}
+
+.horizontal-bar {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: #00A1E4; /* Azul más claro para la línea horizontal */
+    top: 20px;
+    left: 0;
+}
+
+/* Texto DGT */
 .dgt-text {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    color: #003087;
+    color: #003087; /* Azul oscuro de la DGT */
+    letter-spacing: 2px;
 }
 
+/* Subtítulo */
 .subtitle {
     font-size: 16px;
     color: #333;
-    margin-top: 5px;
-}
-
-/* Sección derecha (círculo) */
-.right-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle {
-    width: 150px;
-    height: 150px;
-    background-color: #003087;
-    border: 5px solid white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dgt-circle-text {
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Texto inferior */
-.bottom-text {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.bottom-text h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.bottom-text p {
-    font-size: 20px;
     margin-top: 5px;
 }
