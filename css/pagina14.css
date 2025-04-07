@@ -21,7 +21,7 @@
   /* Sidebar lateral */
   .sidebar {
     width: 30%;
-    background-color: rgb(98, 200, 139); /* Verde más clarito */
+    background-color: rgb(98, 163, 200);
     display: flex;
     align-items: center;
     justify-content: center;
