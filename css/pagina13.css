@@ -97,8 +97,8 @@ body {
 
 .right-section img {
   height: auto;
-  width: 383%; /* Ajusta el ancho al contenedor */
-  max-width: 395%; /* Asegura que la imagen no se expanda más allá del contenedor */
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 100%; /* Asegura que la imagen no se expanda más allá del contenedor */
   object-fit: contain;
   display: block;
   transform: rotate(90deg); /* Si es necesario para la orientación */
