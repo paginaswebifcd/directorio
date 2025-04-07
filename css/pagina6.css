@@ -6,6 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #FFA500; /* Fondo naranja */
     color: #003366; /* Texto general en azul oscuro */
+    margin: 0; /* Eliminar margen por defecto para que el banner esté pegado arriba */
 }
 
 /* Estilo del banner superior */
