@@ -1,7 +1,7 @@
 /* 
-  =================================================
+  ========================================
   RESET BÁSICO
-  =================================================
+  ========================================
 */
 * {
   margin: 0;
@@ -10,38 +10,35 @@
 }
 
 /*
-  =================================================
+  ========================================
   TIPOGRAFÍA BASE
-  =================================================
-  Usamos 'Merriweather' de Google Fonts (o una tipografía serif) 
-  para acercarnos a un estilo institucional/clásico.
-  Ajusta según tu preferencia o la tipografía corporativa que dispongas.
+  ========================================
 */
 body {
   font-family: 'Merriweather', serif;
-  background-color: #f0f0f0;
+  background-color: #ffdc00;
   color: #333;
 }
 
 /*
-  =================================================
+  ========================================
   CONTENEDOR PRINCIPAL
-  =================================================
+  ========================================
 */
 .container {
   display: flex;
   flex-direction: row;
-  height: 101vh; /* Ocupa toda la ventana */
+  height: 101vh;
 }
 
 /*
-  =================================================
+  ========================================
   SECCIÓN IZQUIERDA
-  =================================================
+  ========================================
 */
 .left-section {
   width: 50%;
-  background-color: #ffdc00; /* Un amarillo aproximado (#F7E700 también es común) */
+  background-color: #ffdc00;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,19 +47,16 @@ body {
   padding: 2rem;
 }
 
-/*
-  Contenedor circular para el logo
-*/
 .logo-circle {
   width: 229px;
   height: 219px;
   border-radius: 73%;
-  background-color: #fff; /* fondo blanco para destacar el logo */
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  overflow: hidden; /* Si quieres que el logo “encaje” dentro del círculo */
+  overflow: hidden;
 }
 
 .logo-circle img {
@@ -70,50 +64,45 @@ body {
   height: auto;
 }
 
-/* Título principal (Agencia Tributaria) */
 .left-section h1 {
   font-size: 4rem;
   color: #000;
   margin-bottom: 0.3rem;
 }
 
-/* Subtítulo (Hacienda Estatal) */
 .left-section h2 {
   font-size: 2.7rem;
   color: #000;
 }
 
 /*
-  =================================================
-  SECCIÓN DERECHA
-  =================================================
+  ========================================
+  SECCIÓN DERECHA ADAPTADA
+  ========================================
 */
 .right-section {
-  width: 54%;
-  position: relative;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Pega la imagen arriba */
+  padding-top: 2rem; /* Opcional: espacio arriba */
   overflow: hidden;
-  background-color: #ffdc00; /* Fondo alrededor de la imagen */
-  display: flex; /* Para centrar la imagen si lo deseas */
-  justify-content: center; /* Centrado horizontal */
-  align-items: center; /* Centrado vertical */
+  border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-top-right-radius: 0;
+    transform: rotate(270deg); /* Rota la imagen a vertical */    
+    border-bottom-right-radius: 0;
 }
 
-/* Imagen de fondo (edificio) */
 .right-section img {
-  width: 732px; /* Tamaño fijo para la imagen */
-  height: 712px; /* Igual al ancho para hacerla circular */
-  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  height: auto;
+  width: 383%; /* Ajusta el ancho al contenedor */
+  max-width: 395%; /* Asegura que la imagen no se expanda más allá del contenedor */
+  object-fit: contain;
   display: block;
-  border-radius: 36%; /* Hace el marco circular */
+  transform: rotate(90deg); /* Si es necesario para la orientación */
 }
 
-/* 
-  Ejemplo opcional si quieres superponer texto en la sección derecha:
-  .building-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 1.8rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-  }
+
+
