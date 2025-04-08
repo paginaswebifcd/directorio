@@ -1,0 +1,458 @@
+/* Archivo 1: tramites-seguridad-social-1.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset básico inspirado en el ejemplo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Banner superior inspirado en el sidebar del ejemplo */
+.banner {
+    background-color: rgb(98, 200, 139);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal */
+.container-my5 {
+    padding: 40px 15px;
+}
+
+/* Tarjetas */
+.card-my {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;
+}
+
+.card-my:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body-my {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-container-my {
+    margin-bottom: 1.5rem;
+}
+
+.icon-container-my i {
+    font-size: 3rem;
+}
+
+.card-title-my {
+    font-size: 1.2rem;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-title-link-my {
+    text-decoration: none;
+}
+
+.card-title-link-my:hover .card-title-my {
+    color: #ff6f61;
+}
+
+.list-unstyled-my li {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn-via-sms {
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-via-sms:hover {
+    background-color: #ff4a3d;
+}
+
+.btn-via-sms i {
+    margin-left: 0.5rem;
+}
+
+.sin-certificado {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .card-body-my {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 1.5rem 0;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .container-my5 {
+        padding: 20px 10px;
+    }
+
+    .card-body-my {
+        padding: 1rem;
+    }
+
+    .icon-container-my i {
+        font-size: 2.5rem;
+    }
+
+    .btn-via-sms {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Archivo 2: seguridadsocial.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #014757;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.left-panel {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+h2 {
+    color: rgb(253, 207, 0);
+    font-size: 45px;
+    font-style: italic;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    display: block;
+    padding: 15px;
+    background-color: lightblue;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.button:hover {
+    background-color: #1791ee;
+}
+
+.entities {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.entities img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button1 .fas.fa-clock {
+    color: #fcfcfc;
+    font-size: 30px;
+}
+
+.button2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button2 .fa-solid.fa-file-excel {
+    color: #fcfcfc;
+    font-size: 30px;
+}
+
+.button3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button3 .fa-solid.fa-question {
+    color: #fcfcfc;
+    font-size: 30px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .left-panel {
+        width: 35%;
+        text-align: left;
+    }
+
+    .right-panel {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .header {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .button1 .fas.fa-clock,
+    .button2 .fa-solid.fa-file-excel,
+    .button3 .fa-solid.fa-question {
+        font-size: 24px;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+}
+
+/* Archivo 3: seguridad-social.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #4CAF83;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.sidebar h1 {
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content {
+    width: 75%;
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 60px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sms, .tramite {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.sms {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.tramite {
+    background-color: #0275d8;
+    color: white;
+}
+
+.sms:hover {
+    background-color: #ec971f;
+}
+
+.tramite:hover {
+    background-color: #025aa5;
+}
+
+.plus-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
