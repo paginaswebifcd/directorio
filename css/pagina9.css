@@ -1,40 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Fondo con la imagen */
-  body {
-    background-image: url('../images/logo-sae.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  
-  /* Capa de texto encima */
-  .overlay {
-    position: absolute;
-    top: 25%;
-    left: 8%;
-    color: white;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo con la imagen */
+body {
+  background-image: url('../images/logo-sae.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Capa de texto encima */
+.overlay {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  color: white;
+  max-width: 80%;
+}
+
+/* Texto grande para pantallas grandes */
+.overlay h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: 30px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .overlay h1 {
-    font-size: 70px;
-    font-weight: bold;
+    font-size: 50px;
   }
-  
+
   .overlay p {
-    font-size: 30px;
-    margin-top: 10px;
-    line-height: 1.4;
+    font-size: 24px;
   }
-  
+
+  .overlay {
+    top: 20%;
+    left: 6%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .overlay h1 {
+    font-size: 36px;
+  }
+
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay {
+    top: 15%;
+    left: 5%;
+    max-width: 90%;
+  }
+}
