@@ -138,3 +138,12 @@
             transition: 0.3s;
             background-color: #ccc; /* Fondo verde */
         }
+
+        @media (max-width: 768px) {
+            .left-section {
+                width: 100%;
+              }
+              .right-section {
+                width: 100%;
+              }
+        }
