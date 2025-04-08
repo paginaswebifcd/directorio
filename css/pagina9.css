@@ -12,7 +12,7 @@
   
   /* Fondo con la imagen */
   body {
-    background-image: url('logo-sae.jpg');
+    background-image: url('../images/logo-sae.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
