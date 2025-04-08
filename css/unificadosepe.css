@@ -1,0 +1,64 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeb3b;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; /* Cambiado a flex para alinear imágenes horizontalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre imágenes */
+    height: 100vh;
+}
+
+/* Estilos para las imágenes lado a lado */
+.side-image {
+    width: 50%; /* Cada imagen ocupa la mitad del contenedor */
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Efecto al pasar el ratón */
+}
+
+/* Estilo para el enlace de la imagen */
+.image-link {
+    display: block;
+    text-decoration: none;
+}
+
+.image-link:hover .side-image {
+    transform: scale(1.05); /* Ligero aumento al pasar el ratón */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* En pantallas pequeñas, imágenes una encima de otra */
+        gap: 10px;
+    }
+
+    .side-image {
+        width: 100%; /* Imágenes ocupan todo el ancho en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
