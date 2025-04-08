@@ -1,166 +1,285 @@
-/* Variables globales */
-:root {
-    --color-primary: #e44d26;
-    --color-secondary: #333;
-    --color-white: #fff;
-    --color-black: #000;
-    --font-main: Arial, sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
-}
-
-/* ==========================
-   ESTILOS GLOBALES GENERALES
-   ========================== */
-
+/* === Estilos de seguridad-social.css === */
 body {
     margin: 0;
-    padding: 0;
-    font-family: var(--font-main);
-    background-color: var(--color-white);
-    color: var(--color-secondary);
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-family: var(--font-secondary);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-/* ==========================
-   ESTILOS PAGE 1
-   ========================== */
-
-.page1-header {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 20px;
-    text-align: center;
-}
-
-.page1-container {
+.main {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #4CAF83;
+    color: white;
+    display: flex;
     justify-content: center;
-    background-color: var(--color-white);
+    align-items: center;
+    padding: 40px 20px;
 }
 
-.page1-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-secondary);
-    border-radius: 8px;
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
+.sidebar h1 {
+    font-size: 2.5em;
     text-align: center;
-    transition: transform 0.3s;
+    text-transform: uppercase;
 }
 
-.page1-card:hover {
-    transform: scale(1.05);
+.content {
+    width: 75%;
+    padding: 40px;
 }
 
-.page1-button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.page1-button:hover {
-    background-color: #c03d1c;
-}
-
-/* ==========================
-   ESTILOS PAGE 2
-   ========================== */
-
-.page2-header {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
+.card {
+    background-color: white;
+    border-radius: 15px;
     padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.page2-container {
-    padding: 20px;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    text-align: center;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.page2-section {
-    margin-bottom: 30px;
-}
-
-.page2-title {
-    color: var(--color-primary);
-    font-size: 24px;
+.card img {
+    max-width: 60px;
     margin-bottom: 15px;
 }
 
-.page2-text {
-    color: var(--color-white);
-    font-size: 16px;
-    line-height: 1.6;
+.card h2 {
+    font-size: 1em;
+    margin: 10px 0 5px;
 }
 
-.page2-button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 10px 25px;
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sms, .tramite {
+    display: inline-block;
+    padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
 }
 
-.page2-button:hover {
-    background-color: #c03d1c;
+.sms {
+    background-color: #f0ad4e;
+    color: white;
 }
 
-/* ==========================
-   ANIMACIONES OPCIONALES
-   ========================== */
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.tramite {
+    background-color: #0275d8;
+    color: white;
 }
 
-.page1-card, .page2-section {
-    animation: fadeIn 0.8s ease-in;
+.sms:hover {
+    background-color: #ec971f;
 }
 
-/* ==========================
-   MEDIA QUERIES
-   ========================== */
+.tramite:hover {
+    background-color: #025aa5;
+}
 
-@media (max-width: 768px) {
-    .page1-container {
-        flex-direction: column;
-        align-items: center;
+.plus-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+
+/* === Estilos de seguridadsocial.css === */
+body.alt {
+    font-family: Arial, sans-serif;
+    background-color: #014757;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.left-panel {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+h2.alt {
+    color: rgb(253, 207, 0);
+    font-size: 45px;
+    font-style: italic;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    display: block;
+    padding: 15px;
+    background-color: lightblue;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.button:hover {
+    background-color: #1791ee;
+}
+
+.entities {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.entities img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button1,
+.button2,
+.button3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button1 .fas.fa-clock,
+.button2 .fa-solid.fa-file-excel,
+.button3 .fa-solid.fa-question {
+    color: #fcfcfc;
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .page1-card {
-        width: 90%;
+    .left-panel {
+        width: 35%;
+        text-align: left;
     }
 
-    .page2-title {
-        font-size: 20px;
+    .right-panel {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .header {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .button1 .fas.fa-clock,
+    .button2 .fa-solid.fa-file-excel,
+    .button3 .fa-solid.fa-question {
+        font-size: 24px;
+    }
+
+    .right-panel {
+        padding: 20px;
     }
 }
