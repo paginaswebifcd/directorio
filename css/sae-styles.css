@@ -18,25 +18,11 @@ body {
     color: #333333;
 }
 
-/* Reglas específicas para el logo en el segundo HTML */
-body > img[src*="logo-sae.jpg"] {
-    display: block;
-    max-width: 90%;
-    height: auto;
-    margin: 20px auto;
-}
-
 /* Contenedor principal */
 .contenedor-principal {
     display: flex;
     width: 100%;
     min-height: 100vh;
-}
-
-.contenedor-logo {
-    text-align: center;
-    padding: 20px;
-    background: #f0f0f0; /* Opcional */
 }
 
 /* Sidebar lateral */
@@ -164,12 +150,51 @@ body > img[src*="logo-sae.jpg"] {
         height: 25px;
         font-size: 1.3rem;
     }
+}
 
-    /* Regla específica para móviles en el segundo HTML */
-    body > img[src*="logo-sae.jpg"] {
-        margin: 10px auto;
+/* ------------------------- */
+/* ESTILOS PARA EL SEGUNDO HTML */
+/* ------------------------- */
+
+body:not(.cuerpo) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 20px;
+    box-sizing: content-box;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries específicas para la imagen */
+@media (max-width: 768px) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
         max-width: 95%;
+        padding: 15px;
     }
 }
 
-/* Eliminé las media queries del overlay que no se usan */
+@media (max-width: 480px) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Versión vertical (retrato) */
+@media (orientation: portrait) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+        max-width: 80vh;
+    }
+}
