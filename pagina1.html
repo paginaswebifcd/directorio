@@ -1,87 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* Fondo con el color #f8f8f8 */
-            height: 100vh;
-            color: black; /* Cambié el color del texto a negro para mejor contraste */
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            padding: 20px;
-        }
-
-        .left-side {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-        }
-
-        .right-side {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Alinea el contenido hacia la parte superior */
-            width: 50%;
-            padding-top: 20px; /* Ajusta la distancia desde la parte superior */
-        }
-
-        .my-button {
-            background-color: yellow; /* Fondo amarillo */
-            color: black; /* Texto en negro para buen contraste */
-            border: none;
-            padding: 40px 60px; /* Botón mucho más grande */
-            font-size: 30px; /* Tamaño de fuente más grande */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: -200px; /* Ajuste para mover el botón mucho más arriba */
-        }
-
-        .my-button:hover {
-            background-color: #ffcc00; /* Un amarillo más oscuro cuando se pasa el mouse */
-        }
-
-        .image {
-            width: 80%; /* Hacemos la imagen un 80% de la mitad de la página */
-            height: auto;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Inicio</title>
+  <link rel="stylesheet" href="css/pagina1.css">
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
-            <img src="images/pagina1_2.png" alt="Imagen de inicio" class="image">
-        </div>
-        <div class="right-side">
-            <button class="my-button">
-                Centro de Trámites
-            </button>
-        </div>
+  <div class="container">
+    <div class="left-side">
+      <img src="images/pagina1_2.png" alt="Imagen de inicio" class="image" />
     </div>
+    <div class="right-side">
+      <!-- Botón que lleva a pagina2.html -->
+      <a href="pagina2.html" class="my-button">Centro de Trámites</a>
+
+      <div class="image-container">
+        <img src="images/Tramites.png" alt="Imagen 1" />
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

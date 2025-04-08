@@ -1,140 +1,115 @@
 /* Importar la fuente Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-/* Aplicar la fuente a todo el cuerpo */
+/* Reset básico inspirado en el ejemplo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #FFA500; /* Fondo naranja */
-    color: #003366; /* Texto general en azul oscuro */
+    background-color: #ffffff; /* Fondo blanco como en el ejemplo */
+    color: #333333; /* Texto gris oscuro */
 }
 
-/* Estilo del banner superior */
+/* Banner superior inspirado en el sidebar del ejemplo */
 .banner {
-    background-color: #008000; /* Verde sólido */
-    padding: 1.5rem 0;
-    position: relative;
-    overflow: hidden;
+    background-color: rgb(98, 200, 139); /* Verde claro del ejemplo */
+    padding: 2rem 0; /* Espaciado más limpio */
+    text-align: center; /* Centrado para un look más moderno */
 }
 
-/* Patrón geométrico de triángulos */
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 10px,
-        transparent 10px,
-        transparent 20px
-    );
-    opacity: 0.3;
-}
-
-/* Título del banner con efecto neón */
 .banner-title {
-    font-size: 2rem;
-    color: #FFFFFF;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 0, 0.5); /* Efecto neón */
-    transition: text-shadow 0.3s ease;
-}
-
-/* Efecto hover en el título */
-.banner-title:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(0, 255, 0, 1);
-}
-
-/* Subtítulo del banner con animación de fade-in */
-.banner-subtitle {
-    font-size: 1rem;
-    color: #FFD700; /* Amarillo dorado */
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
-    animation-delay: 0.5s;
-}
-
-/* Animación de fade-in */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(10px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Estilo de las tarjetas */
-.card {
-    border: 2px solid #000; /* Bordes negros */
-    border-radius: 0; /* Sin bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
-    margin-bottom: 2.5rem;
-    min-height: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
-}
-
-/* Efecto hover en las tarjetas */
-.card:hover {
-    transform: scale(1.05); /* Agrandar un poco */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra más fuerte */
-}
-
-/* Padding interno */
-.card-body {
-    padding: 3rem;
-}
-
-/* Contenedor de iconos con altura fija */
-.icon-container {
-    height: 80px; /* Altura fija para uniformidad */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-/* Iconos grandes */
-.icon-container i {
-    font-size: 4rem; /* Tamaño grande */
-}
-
-/* Títulos en azul claro */
-.card-title {
-    color: #006699;
+    font-size: 2.5rem; /* Tamaño ajustado para pantallas variadas */
+    color: #ffffff;
     font-weight: 600;
-    font-size: 1.25rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Contenedor principal */
+.container.my-5 {
+    padding: 40px 15px; /* Espaciado inspirado en el ejemplo */
+}
+
+/* Tarjetas */
+.card {
+    background-color: #ffffff;
+    border: none; /* Sin bordes para un look limpio */
+    border-radius: 12px; /* Bordes redondeados como en el ejemplo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
+    min-height: 300px; /* Altura mínima para uniformidad */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevación al hover como en el ejemplo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 2rem; /* Espaciado interno más amplio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor de iconos */
+.icon-container {
     margin-bottom: 1.5rem;
 }
 
-/* Estilo para el enlace del título */
+.icon-container i {
+    font-size: 3rem; /* Iconos grandes pero no exagerados */
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-size: 1.2rem; /* Tamaño legible */
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 .card-title-link {
-    text-decoration: none; /* Quitar subrayado por defecto */
+    text-decoration: none;
 }
 
 .card-title-link:hover .card-title {
-    color: #003366; /* Cambiar color al pasar el ratón */
-    text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+    color: #ff6f61; /* Color coral del ejemplo para hover */
 }
 
-/* Lista en azul oscuro */
+/* Lista */
 .list-unstyled li {
-    color: #003366;
+    color: #333333;
     font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* Botón Vía SMS mejorado */
+/* Botón Vía SMS inspirado en el sello-mas */
 .btn-via-sms {
-    background-color: #007bff; /* Azul */
-    color: white;
+    background-color: #ff6f61; /* Color coral del ejemplo */
+    color: #ffffff;
     border: none;
-    border-radius: 0; /* Rectangular */
+    border-radius: 25px; /* Bordes redondeados pero no completamente circular */
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease;
 }
 
 .btn-via-sms:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #ff4a3d; /* Tono más oscuro como en el ejemplo */
+}
+
+.btn-via-sms i {
+    margin-left: 0.5rem;
 }
 
 /* Estilo para "(sin certificado)" */
@@ -142,15 +117,44 @@ body {
     background-color: #f0f0f0;
     color: #666;
     padding: 0.75rem 1.5rem;
-    border-radius: 0;
+    border-radius: 12px; /* Bordes redondeados */
     font-size: 1rem;
-    margin-top: auto;
-    text-align: center;
 }
 
-/* Asegurar que las tarjetas tengan altura uniforme */
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Responsive Design inspirado en el ejemplo */
+@media (max-width: 1024px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 1.5rem 0;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .container.my-5 {
+        padding: 20px 10px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .icon-container i {
+        font-size: 2.5rem;
+    }
+
+    .btn-via-sms {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }
