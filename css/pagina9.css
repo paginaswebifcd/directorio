@@ -13,9 +13,10 @@ body, html {
 /* Fondo con la imagen */
 body {
   background-image: url('../images/logo-sae.jpg');
-  background-size: cover;
+  background-size: contain; /* cambio de cover a contain */
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* útil para mantener la imagen fija mientras se hace scroll */
   position: relative;
 }
 
@@ -28,7 +29,6 @@ body {
   max-width: 80%;
 }
 
-/* Texto grande para pantallas grandes */
 .overlay h1 {
   font-size: 70px;
   font-weight: bold;
@@ -72,5 +72,11 @@ body {
     top: 15%;
     left: 5%;
     max-width: 90%;
+  }
+
+  /* En móviles, fondo scrollable si fixed no funciona bien */
+  body {
+    background-attachment: scroll;
+    background-size: contain;
   }
 }
