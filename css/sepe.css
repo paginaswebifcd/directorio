@@ -1,48 +1,78 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    overflow: hidden;
-  }
-  
-  .container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mejora en la base del documento */
+html, body {
+  width: 100%;
+  height: 100vh; /* Usar vh para asegurar que ocupe toda la altura de la ventana */
+  background-color: #000;
+  overflow: hidden; /* Evita el scroll no deseado */
+  font-family: 'Arial', sans-serif; /* Añadir una fuente por defecto para mejor legibilidad */
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuentes para mejor renderizado */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+/* Estilo de las diapositivas */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantener proporciones de la imagen */
+  opacity: 0;
+  transform: translateY(-100%); /* Animación de entrada desde arriba */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Suavizar la transición */
+  will-change: transform, opacity; /* Optimizar rendimiento de animaciones */
+}
+
+/* Estado activo de la diapositiva */
+.slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ocultar diapositivas antes de animar */
+.slide.hidden {
+  display: none;
+}
+
+/* Añadir soporte para imágenes dentro de las diapositivas */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Asegura que las imágenes no se distorsionen */
+}
+
+/* Mejorar la responsividad */
+@media (orientation: landscape) and (max-height: 500px) {
   .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: transform 1s ease, opacity 1s ease;
+    object-fit: cover; /* Cubrir el área en pantallas horizontales pequeñas */
   }
-  
-  /* Cuando se activa */
-  .slide.show {
-    opacity: 1;
-    transform: translateY(0);
+}
+
+/* Soporte para dispositivos móviles */
+@media (max-width: 768px) {
+  .slide {
+    object-fit: contain; /* Asegurar que el contenido sea visible en pantallas pequeñas */
   }
-  
-  /* Para ocultarlas antes de animar */
-  .hidden {
-    display: none;
+}
+
+/* Añadir accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition: none; /* Desactivar animaciones para usuarios que prefieren menos movimiento */
   }
-  
-  /* Responsive mejora extra para móvil horizontal */
-  @media (orientation: landscape) and (max-height: 500px) {
-    .slide {
-      object-fit: cover;
-    }
-  }
-  
+}
