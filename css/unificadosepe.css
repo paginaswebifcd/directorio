@@ -135,6 +135,25 @@ h1 {
     display: none;
 }
 
+/* Estilo para el enlace a trámites */
+.tramites-link {
+    display: inline-block;
+    background-color: #1a237e; /* Color azul oscuro del h1 */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tramites-link:hover {
+    background-color: #ff6f61; /* Color del sello-mas */
+    transform: translateY(-3px);
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .grid {
@@ -159,29 +178,9 @@ h1 {
         transform: none;
     }
 
-    .sidebar {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .sidebar h1 {
-        font-size: 2.5rem;
-    }
-
-    .seccion-tarjetas {
-        width: 100%;
-        padding: 20px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .tarjeta {
-        padding: 20px;
-    }
-
-    .sello-mas {
-        width: 25px;
-        height: 25px;
-        font-size: 1.3rem;
+    .tramites-link {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
 
@@ -204,14 +203,9 @@ h1 {
         max-width: 100%;
     }
 
-    .plus-btn {
-        width: 25px;
-        height: 25px;
+    .tramites-link {
         font-size: 14px;
-    }
-
-    .card:hover, .contact-card:hover {
-        transform: none;
+        padding: 6px 12px;
     }
 }
 
