@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.cuerpo {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar lateral */
+.sidebar {
+    width: 30%;
+    background-color: rgb(98, 200, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.sidebar h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Sección de tarjetas */
+.seccion-tarjetas {
+    width: 70%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 30px 20px 20px;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Icono de la tarjeta */
+.icono img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+/* Texto de la tarjeta */
+.texto .titulo {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Sello del + como enlace */
+.sello-mas {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff6f61;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.sello-mas:hover {
+    background-color: #ff4a3d;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .seccion-tarjetas {
+        width: 90%;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar h1 {
+        font-size: 2.5rem;
+    }
+
+    .seccion-tarjetas {
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .sello-mas {
+        width: 25px;
+        height: 25px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ------------------------- */
+/* ESTILOS PARA EL SEGUNDO HTML */
+/* ------------------------- */
+
+body:not(.cuerpo) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 20px;
+    box-sizing: content-box;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries específicas para la imagen */
+@media (max-width: 768px) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+        max-width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Versión vertical (retrato) */
+@media (orientation: portrait) {
+    body:not(.cuerpo) > img[src*="logo-sae.jpg"] {
+        max-width: 80vh;
+    }
+}

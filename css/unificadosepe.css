@@ -6,23 +6,24 @@
 }
 
 /* Estilos generales del body */
-body {
+html, body {
+    width: 100%;
+    height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #ffeb3b; /* Color del primer estilo */
+    background-color: #ffeb3b; /* Fondo amarillo del segundo estilo */
     margin: 0;
     padding: 20px;
-    width: 100%;
-    height: 100%;
+    overflow: hidden; /* Del primer estilo */
 }
 
 /* Contenedor principal */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
     position: relative;
+    max-width: 800px; /* Del segundo estilo */
     width: 100vw;
     height: 100vh;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Estilos de encabezado */
@@ -96,7 +97,7 @@ h1 {
     text-decoration: none;
     font-size: 1.5rem;
     border: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
     cursor: pointer;
 }
@@ -115,7 +116,7 @@ h1 {
     max-width: 300px;
 }
 
-/* Estilos para slides (segundo estilo) */
+/* Estilos para slides (del primer estilo) */
 .slide {
     position: absolute;
     width: 100%;
@@ -135,27 +136,12 @@ h1 {
     display: none;
 }
 
-/* Estilo para el enlace a trámites */
-.tramites-link {
-    display: inline-block;
-    background-color: #1a237e; /* Color azul oscuro del h1 */
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.tramites-link:hover {
-    background-color: #ff6f61; /* Color del sello-mas */
-    transform: translateY(-3px);
-}
-
 /* Media Queries */
 @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -178,9 +164,29 @@ h1 {
         transform: none;
     }
 
-    .tramites-link {
-        font-size: 16px;
-        padding: 8px 16px;
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar h1 {
+        font-size: 2.5rem;
+    }
+
+    .seccion-tarjetas {
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .sello-mas {
+        width: 25px;
+        height: 25px;
+        font-size: 1.3rem;
     }
 }
 
@@ -203,9 +209,14 @@ h1 {
         max-width: 100%;
     }
 
-    .tramites-link {
+    .plus-btn {
+        width: 25px;
+        height: 25px;
         font-size: 14px;
-        padding: 6px 12px;
+    }
+
+    .card:hover, .contact-card:hover {
+        transform: none;
     }
 }
 
