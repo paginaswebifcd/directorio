@@ -1,11 +1,16 @@
 /* Base reset y estilos generales */
-body {
+html, body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-color: #f0f0f0;
     min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
     display: flex;
+    background: #050a30; /* Fondo de respaldo */
 }
 
 .container {
@@ -20,16 +25,16 @@ body {
     background: #050a30;
     color: white;
     padding: 20px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    min-height: 50vh;
 }
 
 .logo-container {
     text-align: center;
-    margin: 0 auto; /* Elimina margen superior */
+    margin: 0 auto;
 }
 
 .logo {
@@ -55,27 +60,24 @@ body {
     line-height: 1.4;
 }
 
-/* Alineación especial para h1 y p */
-.text-container {
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* SECCIÓN DERECHA */
 .right-side {
-    width: 100%;
-    min-height: 250px;
+    position: relative;
     overflow: hidden;
+    flex-grow: 1;
+    min-height: 50vh;
 }
 
 .right-side img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* MEDIA QUERIES - ESTRUCTURA ORIGINAL CON ALINEACIÓN */
+/* MEDIA QUERIES OPTIMIZADAS */
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
@@ -83,6 +85,7 @@ body {
 
     .left-side {
         width: 40%;
+        min-height: 100vh;
         padding: 30px;
     }
 
@@ -91,32 +94,21 @@ body {
         min-height: 100vh;
     }
 
-    .logo-container {
-        margin: 15px 0 0 4px; /* Ajusta el margen superior */
-    }
-
     .logo {
         width: 160px;
-        margin-left: 0;
-    }
-
-    .text-container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     .titulo {
         font-size: 3rem;
         text-align: left;
-        margin: 0 0 0 50px; /* Elimina margen superior */
+        margin-left: 50px;
         width: calc(100% - 50px);
     }
 
     .left-side p {
         font-size: 1.5rem;
         text-align: left;
-        margin: 8px 0 0 50px;
+        margin-left: 50px;
         width: calc(100% - 50px);
     }
 }
@@ -144,8 +136,38 @@ body {
         font-size: 1rem;
     }
 
-    .text-container {
-        padding: 0 10px;
+    .right-side {
+        min-height: 40vh;
     }
 }
 
+@media (max-width: 360px) {
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    .left-side p {
+        font-size: 0.9rem;
+    }
+
+    .right-side {
+        min-height: 30vh;
+    }
+}
+
+/* MEJORAS ADICIONALES */
+.text-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.left-side {
+    padding-bottom: 40px; /* Espacio para pantallas pequeñas */
+}
+
+/* Optimización de rendimiento */
+.right-side img {
+    will-change: transform;
+    backface-visibility: hidden;
+}
