@@ -1,0 +1,260 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #004d66;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Estilo general del cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #004d66; /* Fondo azul oscuro */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+        .container {
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+        }
+        .text-section {
+            width: 50%;
+            text-align: left;
+            font-size: 3em;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .circle {
+            width: 600px;
+            height: 400px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle h1 {
+            color: #004d66;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .contact {
+            margin-top: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact p {
+            color: yellow;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+            max-width: 600px;
+        }
+        .phone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: lightgray;
+            padding: 15px 40px;
+            border-radius: 10px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            max-width: 400px;
+        }
+        .phone:hover {
+            background: #004d66;
+            color: white;
+        }
+/* Estilos para los botones laterales */
+.button-group {
+    display: flex;
+    justify-content: flex-start; /* alineado a la izquierda */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    width: 130px;      /* más estrecho que antes */
+    height: 70px;      /* aún grande, pero menos alto */
+    font-size: o.8em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+    /* Importar la fuente Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset básico inspirado en el ejemplo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #004d66; /* Fondo blanco como en el ejemplo */
+    color: #333333; /* Texto gris oscuro */
+}
+
+/* Banner superior inspirado en el sidebar del ejemplo */
+.banner {
+    background-color: rgb(98, 200, 139); /* Verde claro del ejemplo */
+    padding: 2rem 0; /* Espaciado más limpio */
+    text-align: center; /* Centrado para un look más moderno */
+}
+
+.banner-title {
+    font-size: 2.5rem; /* Tamaño ajustado para pantallas variadas */
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Contenedor principal */
+.container.my-5 {
+    padding: 40px 15px; /* Espaciado inspirado en el ejemplo */
+}
+
+/* Tarjetas */
+.card {
+    background-color: #ffffff;
+    border: none; /* Sin bordes para un look limpio */
+    border-radius: 12px; /* Bordes redondeados como en el ejemplo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
+    min-height: 300px; /* Altura mínima para uniformidad */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevación al hover como en el ejemplo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 2rem; /* Espaciado interno más amplio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor de iconos */
+.icon-container {
+    margin-bottom: 1.5rem;
+}
+
+.icon-container i {
+    font-size: 3rem; /* Iconos grandes pero no exagerados */
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-size: 1.2rem; /* Tamaño legible */
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-title-link {
+    text-decoration: none;
+}
+
+.card-title-link:hover .card-title {
+    color: #ff6f61; /* Color coral del ejemplo para hover */
+}
+
+/* Lista */
+.list-unstyled li {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Botón Vía SMS inspirado en el sello-mas */
+.btn-via-sms {
+    background-color: #ff6f61; /* Color coral del ejemplo */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados pero no completamente circular */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-via-sms:hover {
+    background-color: #ff4a3d; /* Tono más oscuro como en el ejemplo */
+}
+
+.btn-via-sms i {
+    margin-left: 0.5rem;
+}
+
+/* Estilo para "(sin certificado)" */
+.sin-certificado {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px; /* Bordes redondeados */
+    font-size: 1rem;
+}
+
+/* Responsive Design inspirado en el ejemplo */
+@media (max-width: 1024px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 1.5rem 0;
+    }
+
+    .banner-title {
+        font-size: 1.8rem;
+    }
+
+    .container.my-5 {
+        padding: 20px 10px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .icon-container i {
+        font-size: 2.5rem;
+    }
+
+    .btn-via-sms {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
