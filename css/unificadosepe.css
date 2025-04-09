@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0; /* Evita que se desborde en pantallas pequeñas */
 }
 
 .header {
@@ -35,12 +36,14 @@ body {
 .logo-superior {
     width: 100px;
     margin-bottom: 10px;
+    max-width: 100%; /* Asegura que no se desborde */
 }
 
 .header h1 {
     font-size: 50px;
-    color: #1A3C5A; /* Azul oscuro */
+    color: #1A3C5A;
     margin: 20px 0;
+    line-height: 1.2; /* Mejora la legibilidad */
 }
 
 .header h2 {
@@ -59,6 +62,7 @@ body {
 .illustration-img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain; /* Mantiene proporciones de la imagen */
 }
 
 .right-section {
@@ -68,6 +72,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0; /* Evita que se desborde en pantallas pequeñas */
 }
 
 .grid {
@@ -114,26 +119,48 @@ body {
 .logo-circle {
     background-color: #fff;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 350px; /* Aumentado de 300px a 350px */
+    height: 350px; /* Aumentado de 300px a 350px */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    position: relative;
+    text-align: center;
 }
 
 .logo-circle h1 {
-    font-size: 48px;
+    font-size: 56px; /* Aumentado de 48px a 56px para mantener proporción */
     color: #1A3C5A;
     margin: 0;
+    line-height: 1; /* Asegura que no haya espacio extra */
 }
 
 .logo-circle p {
-    font-size: 16px;
+    font-size: 18px; /* Aumentado de 16px a 18px para mantener proporción */
     color: #1A3C5A;
     margin: 10px 0 0;
+    line-height: 1.2;
+    max-width: 80%; /* Limita el ancho del texto para que no se desborde */
+    text-transform: uppercase; /* Coincide con el estilo de la imagen */
+}
+
+/* Línea de puntos debajo de "SEPE" */
+.logo-circle::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #1A3C5A 0px,
+        #1A3C5A 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    margin: 10px 0;
 }
 
 .chain-border {
@@ -171,56 +198,109 @@ body {
     background-color: #ff4a3d;
 }
 
-/* Media Queries */
+/* Media Queries mejorados para responsividad */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Cambia a columna en pantallas medianas */
         width: 90%;
+        height: auto; /* Permite que el contenedor crezca según contenido */
     }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .left-section, .right-section {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 15px;
     }
 
     .header h1 {
         font-size: 40px;
     }
 
+    .header h2 {
+        font-size: 36px;
+    }
+
+    .logo-superior {
+        width: 80px;
+    }
+
+    .logo-circle {
+        width: 250px; /* Ajustado de 200px a 250px para mantener proporción */
+        height: 250px; /* Ajustado de 200px a 250px */
+    }
+
+    .logo-circle h1 {
+        font-size: 40px; /* Ajustado de 36px a 40px */
+    }
+
+    .logo-circle p {
+        font-size: 14px; /* Ajustado de 14px a 14px, pero con max-width */
+        max-width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .card p {
         font-size: 18px;
     }
 
-    .logo-circle {
-        width: 200px;
-        height: 200px;
-    }
-
     .card:hover {
-        transform: none;
+        transform: none; /* Desactiva hover en pantallas pequeñas */
     }
 }
 
 @media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        padding: 10px;
     }
 
     .header h1 {
         font-size: 30px;
     }
 
-    .card p {
-        font-size: 16px;
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .logo-superior {
+        width: 60px;
     }
 
     .logo-circle {
-        width: 150px;
-        height: 150px;
+        width: 180px; /* Ajustado de 150px a 180px para mantener proporción */
+        height: 180px; /* Ajustado de 150px a 180px */
+    }
+
+    .logo-circle h1 {
+        font-size: 28px; /* Ajustado de 24px a 28px */
+    }
+
+    .logo-circle p {
+        font-size: 12px; /* Ajustado de 12px a 12px, pero con max-width */
+        max-width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+
+    .card p {
+        font-size: 16px;
     }
 
     .sello-mas {
         width: 25px;
         height: 25px;
         font-size: 1.3rem;
+    }
+
+    .illustration-img {
+        max-width: 80%; /* Reduce aún más la imagen en móviles */
     }
 }
