@@ -38,7 +38,7 @@ body {
   background-color: yellow;
   color: black;
   border: none;
-  padding: 50px 80px;
+  padding: 80px 90px;
   font-size: 25px;
   text-align: center;
   border-radius: 8px;
@@ -53,7 +53,7 @@ body {
 }
 
 .image {
-  width: 150%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
   max-width: 100%;
@@ -71,8 +71,15 @@ body {
   height: auto;
   border-radius: 8px;
   background-color: transparent;
-  margin-top: -50px;
+  margin-top: -230px;
   transform: translateX(-200px);
+}
+.linea {
+  margin-top: 10px;
+  height: 2px;
+  background-color: #000000;
+  width: 100%;
+  border: none;
 }
 
 /* 🔽 RESPONSIVE STYLES */
