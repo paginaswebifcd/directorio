@@ -44,16 +44,18 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Asegura que no tenga subrayado */
+  text-decoration: none;
   display: inline-block;
+  z-index: 10;;
 }
+
 
 .my-button:hover {
   background-color: #ffcc00;
 }
 
 .image {
-  width: 70%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
   max-width: 100%;
@@ -71,8 +73,15 @@ body {
   height: auto;
   border-radius: 8px;
   background-color: transparent;
-  margin-top: -50px;
+  margin-top: -250px;
   transform: translateX(-200px);
+}
+.linea {
+  margin-top: 10px;
+  height: 2px;
+  background-color: #000000;
+  width: 100%;
+  border: none;
 }
 
 /* 🔽 RESPONSIVE STYLES */
