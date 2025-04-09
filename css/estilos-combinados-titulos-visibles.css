@@ -287,14 +287,12 @@ body.alt {
 }
 
 .container {
-    display: flex;
     flex-wrap: wrap;
     width: 90%;
     max-width: 1200px;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh; /* Asegura espacio vertical */
 }
 
 .left-panel {
