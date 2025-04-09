@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0; /* Evita que se desborde en pantallas pequeñas */
 }
 
 .header {
@@ -35,11 +36,12 @@ body {
 .logo-superior {
     width: 100px;
     margin-bottom: 10px;
+    max-width: 100%; /* Asegura que no se desborde */
 }
 
 .header h1 {
     font-size: 50px;
-    color: #1A3C5A; /* Azul oscuro */
+    color: #1A3C5A;
     margin: 20px 0;
 }
 
@@ -59,6 +61,7 @@ body {
 .illustration-img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain; /* Mantiene proporciones de la imagen */
 }
 
 .right-section {
@@ -68,6 +71,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0; /* Evita que se desborde en pantallas pequeñas */
 }
 
 .grid {
@@ -171,23 +175,29 @@ body {
     background-color: #ff4a3d;
 }
 
-/* Media Queries */
+/* Media Queries mejorados para responsividad */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Cambia a columna en pantallas medianas */
         width: 90%;
+        height: auto; /* Permite que el contenedor crezca según contenido */
     }
 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .left-section, .right-section {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 15px;
     }
 
     .header h1 {
         font-size: 40px;
     }
 
-    .card p {
-        font-size: 18px;
+    .header h2 {
+        font-size: 36px;
+    }
+
+    .logo-superior {
+        width: 80px;
     }
 
     .logo-circle {
@@ -195,22 +205,47 @@ body {
         height: 200px;
     }
 
+    .logo-circle h1 {
+        font-size: 36px;
+    }
+
+    .logo-circle p {
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
     .card:hover {
-        transform: none;
+        transform: none; /* Desactiva hover en pantallas pequeñas */
     }
 }
 
 @media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        padding: 10px;
     }
 
     .header h1 {
         font-size: 30px;
     }
 
-    .card p {
-        font-size: 16px;
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .logo-superior {
+        width: 60px;
     }
 
     .logo-circle {
@@ -218,9 +253,29 @@ body {
         height: 150px;
     }
 
+    .logo-circle h1 {
+        font-size: 24px;
+    }
+
+    .logo-circle p {
+        font-size: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
     .sello-mas {
         width: 25px;
         height: 25px;
         font-size: 1.3rem;
+    }
+
+    .illustration-img {
+        max-width: 80%; /* Reduce aún más la imagen en móviles */
     }
 }
