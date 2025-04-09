@@ -43,6 +43,7 @@ body {
     font-size: 50px;
     color: #1A3C5A;
     margin: 20px 0;
+    line-height: 1.2; /* Mejora la legibilidad */
 }
 
 .header h2 {
@@ -126,18 +127,40 @@ body {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    position: relative;
+    text-align: center;
 }
 
 .logo-circle h1 {
     font-size: 48px;
     color: #1A3C5A;
     margin: 0;
+    line-height: 1; /* Asegura que no haya espacio extra */
 }
 
 .logo-circle p {
     font-size: 16px;
     color: #1A3C5A;
     margin: 10px 0 0;
+    line-height: 1.2;
+    max-width: 80%; /* Limita el ancho del texto para que no se desborde */
+    text-transform: uppercase; /* Coincide con el estilo de la imagen */
+}
+
+/* Línea de puntos debajo de "SEPE" */
+.logo-circle::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #1A3C5A 0px,
+        #1A3C5A 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    margin: 10px 0;
 }
 
 .chain-border {
@@ -211,6 +234,7 @@ body {
 
     .logo-circle p {
         font-size: 14px;
+        max-width: 90%;
     }
 
     .grid {
@@ -259,6 +283,7 @@ body {
 
     .logo-circle p {
         font-size: 12px;
+        max-width: 90%;
     }
 
     .grid {
