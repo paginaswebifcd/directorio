@@ -119,8 +119,8 @@ body {
 .logo-circle {
     background-color: #fff;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 350px; /* Aumentado de 300px a 350px */
+    height: 350px; /* Aumentado de 300px a 350px */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,14 +132,14 @@ body {
 }
 
 .logo-circle h1 {
-    font-size: 48px;
+    font-size: 56px; /* Aumentado de 48px a 56px para mantener proporción */
     color: #1A3C5A;
     margin: 0;
     line-height: 1; /* Asegura que no haya espacio extra */
 }
 
 .logo-circle p {
-    font-size: 16px;
+    font-size: 18px; /* Aumentado de 16px a 18px para mantener proporción */
     color: #1A3C5A;
     margin: 10px 0 0;
     line-height: 1.2;
@@ -224,16 +224,16 @@ body {
     }
 
     .logo-circle {
-        width: 200px;
-        height: 200px;
+        width: 250px; /* Ajustado de 200px a 250px para mantener proporción */
+        height: 250px; /* Ajustado de 200px a 250px */
     }
 
     .logo-circle h1 {
-        font-size: 36px;
+        font-size: 40px; /* Ajustado de 36px a 40px */
     }
 
     .logo-circle p {
-        font-size: 14px;
+        font-size: 14px; /* Ajustado de 14px a 14px, pero con max-width */
         max-width: 90%;
     }
 
@@ -273,16 +273,16 @@ body {
     }
 
     .logo-circle {
-        width: 150px;
-        height: 150px;
+        width: 180px; /* Ajustado de 150px a 180px para mantener proporción */
+        height: 180px; /* Ajustado de 150px a 180px */
     }
 
     .logo-circle h1 {
-        font-size: 24px;
+        font-size: 28px; /* Ajustado de 24px a 28px */
     }
 
     .logo-circle p {
-        font-size: 12px;
+        font-size: 12px; /* Ajustado de 12px a 12px, pero con max-width */
         max-width: 90%;
     }
 
