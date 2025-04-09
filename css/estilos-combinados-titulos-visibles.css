@@ -13,47 +13,49 @@
 /* Estilo general del cuerpo */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff; /* Fondo blanco como en el ejemplo */
-    color: #333333; /* Texto gris oscuro */
+    background-color: #004d66; /* Fondo azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Banner superior inspirado en el sidebar del ejemplo */
 .banner {
     background-color: rgb(98, 200, 139); /* Verde claro del ejemplo */
-    padding: 2rem 0; /* Espaciado más limpio */
-    text-align: center; /* Centrado para un look más moderno */
+    padding: 2rem 0;
+    text-align: center;
 }
 
 .banner-title {
-    font-size: 2.5rem; /* Tamaño ajustado para pantallas variadas */
+    font-size: 2.5rem;
     color: #ffffff;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Contenedor principal */
 .container.my-5 {
-    padding: 40px 15px; /* Espaciado inspirado en el ejemplo */
+    padding: 40px 15px;
 }
 
 /* Tarjetas */
 .card {
     background-color: #ffffff;
-    border: none; /* Sin bordes para un look limpio */
-    border-radius: 12px; /* Bordes redondeados como en el ejemplo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
-    min-height: 300px; /* Altura mínima para uniformidad */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Elevación al hover como en el ejemplo */
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Cuerpo de la tarjeta */
 .card-body {
-    padding: 2rem; /* Espaciado interno más amplio */
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,12 +68,12 @@ body {
 }
 
 .icon-container i {
-    font-size: 3rem; /* Iconos grandes pero no exagerados */
+    font-size: 3rem;
 }
 
 /* Títulos de las tarjetas */
 .card-title {
-    font-size: 1.2rem; /* Tamaño legible */
+    font-size: 1.2rem;
     color: #333333;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -82,7 +84,7 @@ body {
 }
 
 .card-title-link:hover .card-title {
-    color: #ff6f61; /* Color coral del ejemplo para hover */
+    color: #ff6f61;
 }
 
 /* Lista */
@@ -94,10 +96,10 @@ body {
 
 /* Botón Vía SMS inspirado en el sello-mas */
 .btn-via-sms {
-    background-color: #ff6f61; /* Color coral del ejemplo */
+    background-color: #ff6f61;
     color: #ffffff;
     border: none;
-    border-radius: 25px; /* Bordes redondeados pero no completamente circular */
+    border-radius: 25px;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     display: flex;
@@ -107,7 +109,7 @@ body {
 }
 
 .btn-via-sms:hover {
-    background-color: #ff4a3d; /* Tono más oscuro como en el ejemplo */
+    background-color: #ff4a3d;
 }
 
 .btn-via-sms i {
@@ -119,7 +121,7 @@ body {
     background-color: #f0f0f0;
     color: #666;
     padding: 0.75rem 1.5rem;
-    border-radius: 12px; /* Bordes redondeados */
+    border-radius: 12px;
     font-size: 1rem;
 }
 
@@ -162,14 +164,6 @@ body {
 }
 
 /* === Combinación de seguridad-social-general.css === */
-
-/* === Estilos de seguridad-social.css === */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #014757;
-}
-
 .main {
     display: flex;
     min-height: 100vh;
@@ -284,14 +278,10 @@ body {
     cursor: pointer;
 }
 
-
 /* === Estilos de seguridadsocial.css (integrado) === */
 body.alt {
-    font-family: Arial, sans-serif;
     background-color: #014757;
     color: white;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -302,6 +292,9 @@ body.alt {
     width: 90%;
     max-width: 1200px;
     padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Asegura espacio vertical */
 }
 
 .left-panel {
@@ -449,32 +442,34 @@ h2.alt {
     }
 }
 
-
-
 /* === Estilos adicionales (combinación extra) === */
-body {
-    font-family: Arial, sans-serif;
+body.custom {
     background-color: #004d66;
     color: white;
     text-align: center;
     padding: 20px;
 }
-.container {
+
+.container.custom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 900px;
-    margin: auto;
+    margin: auto nor;
 }
+
 .text-section {
     width: 50%;
     text-align: left;
     font-size: 3em;
 }
+
 .highlight {
     font-weight: bold;
 }
-.circle {
+
+/* Clase específica para evitar conflicto con otros círculos */
+.circle.custom {
     width: 600px;
     height: 400px;
     background: white;
@@ -483,11 +478,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-.circle h1 {
+
+.circle.custom h1 {
     color: #004d66;
     font-size: 2.5em;
     text-align: center;
 }
+
 .contact {
     margin-top: 20px;
     text-align: left;
@@ -495,6 +492,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .contact p {
     color: yellow;
     font-size: 3em;
@@ -503,6 +501,7 @@ body {
     width: 100%;
     max-width: 600px;
 }
+
 .phone {
     display: flex;
     justify-content: center;
@@ -516,28 +515,25 @@ body {
     font-weight: bold;
     max-width: 400px;
 }
+
 .phone:hover {
     background: #004d66;
     color: white;
 }
 
-
-
 /* === Corrección de visibilidad para títulos === */
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* blanco por defecto para títulos */
+    color: #ffffff;
 }
 
 /* Excepciones sobre fondos blancos */
 .right-panel h2,
 .card h2,
 .circle h1 {
-    color: #004d66; /* azul oscuro para contraste sobre fondo blanco */
+    color: #004d66;
 }
 
 /* === CORRECCIÓN AVANZADA PARA TARJETAS ESTRECHAS === */
-
-/* Asegura que el contenedor de las tarjetas no limite su tamaño */
 .container, .cards-container, .main-content {
     width: 100%;
     max-width: 1200px;
@@ -545,7 +541,6 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
-/* Asegura que el grid deje espacio suficiente */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -553,10 +548,36 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-/* Estilo de las tarjetas para usar todo el ancho posible */
 .card {
     width: 100%;
     max-width: unset;
     box-sizing: border-box;
     padding: 20px;
+}
+
+/* === Estilos específicos para el círculo sin cortarse === */
+.contenedor-padre {
+    overflow: visible; /* Evita que el círculo se corte */
+    width: 100%;
+    position: relative;
+    min-height: 400px; /* Asegura espacio para el círculo */
+}
+
+.circle {
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px; /* Ajustado a la derecha */
+    top: 0; /* Alineado en la parte superior */
+}
+
+.circle h1 {
+    color: #004d66;
+    font-size: 2.5em;
+    text-align: center;
 }
