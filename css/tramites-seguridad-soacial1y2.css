@@ -258,3 +258,36 @@ body {
         font-size: 0.9rem;
     }
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* por si estás en móvil */
+    padding: 20px;
+}
+
+.text-section {
+    width: 50%;
+    text-align: left;
+    font-size: 2em;
+    color: white;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* empuja el círculo a la derecha */
+}
+
+.circle h1 {
+    color: #004d66;
+    font-size: 2em;
+    text-align: center;
+}
