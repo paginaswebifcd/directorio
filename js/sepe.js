@@ -1,19 +1,12 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const img1 = document.getElementById('img1');
-    const img2 = document.getElementById('img2');
-  
-    // Mostrar la primera imagen
-    img1.classList.remove('hidden');
-    setTimeout(() => {
-      img1.classList.add('show');
-    }, 100);
-  
-    // Mostrar la segunda imagen después de 2.5 segundos
-    setTimeout(() => {
-      img2.classList.remove('hidden');
-      setTimeout(() => {
-        img2.classList.add('show');
-      }, 100);
-    }, 2500);
+document.addEventListener('DOMContentLoaded', () => {
+  const logoCircle = document.querySelector('.logo-circle');
+
+  logoCircle.addEventListener('mouseover', () => {
+      logoCircle.style.transform = 'scale(1.05)';
+      logoCircle.style.transition = 'transform 0.3s ease';
   });
-  
+
+  logoCircle.addEventListener('mouseout', () => {
+      logoCircle.style.transform = 'scale(1)';
+  });
+});
