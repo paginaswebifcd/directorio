@@ -38,15 +38,17 @@ body {
   background-color: yellow;
   color: black;
   border: none;
-  padding: 80px 90px;
+  padding: 50px 80px;
   font-size: 25px;
   text-align: center;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Asegura que no tenga subrayado */
+  text-decoration: none;
   display: inline-block;
+  z-index: 10;;
 }
+
 
 .my-button:hover {
   background-color: #ffcc00;
@@ -71,7 +73,7 @@ body {
   height: auto;
   border-radius: 8px;
   background-color: transparent;
-  margin-top: -230px;
+  margin-top: -250px;
   transform: translateX(-200px);
 }
 .linea {
