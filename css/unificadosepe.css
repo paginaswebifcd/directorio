@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 20px;
     font-family: Arial, sans-serif;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -197,23 +197,21 @@ body {
     background-color: #ff4a3d;
 }
 .botones-paginacion {
-    display: flex;
+   
     justify-content: center;
     gap: 20px;
     margin: 40px 0;
   }
   
-  .boton-pagina {
-    background-color:  #f0cb3c;
-    color: #000000;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-top: 600px;
-    transform: translatex(-800px);
-  }
+ .boton-pagina {
+  background-color: #f0cb3c;
+  color: #000000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
   
   .boton-pagina i {
     margin: 0 8px;
