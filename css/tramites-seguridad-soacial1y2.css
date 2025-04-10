@@ -83,21 +83,41 @@ body {
     margin-top: 20px;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 1rem 0;
+}
+
 .button-group button {
-    width: 130px;      /* más estrecho que antes */
-    height: 70px;      /* aún grande, pero menos alto */
-    font-size: o.8em;
-    background-color: #007BFF;
+    width: 80%;
+    max-width: 250px;
+    height: 60px;
+    font-size: 1.1em;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4facfe 0%, #e9d605 100%);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .button-group button:hover {
-    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e9d605 0%, #4facfe 100%);
 }
+
+.button-group button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
     /* Importar la fuente Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
