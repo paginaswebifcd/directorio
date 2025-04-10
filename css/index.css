@@ -35,7 +35,8 @@ body {
 }
 
 .my-button {
-  background-color: yellow;
+  background-color: #fdd835;
+  
   color: black;
   border: none;
   padding: 50px 80px;
@@ -51,7 +52,7 @@ body {
 
 
 .my-button:hover {
-  background-color: #fdd835;
+  background-color: yellow;
 }
 
 .image {
