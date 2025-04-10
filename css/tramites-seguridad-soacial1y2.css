@@ -290,3 +290,74 @@ body {
     font-size: 2em;
     text-align: center;
 }
+/* Responsive para tablets y móviles */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-section {
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .contact p {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .phone {
+        width: 90%;
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .button-group button {
+        width: 80%;
+        max-width: 250px;
+        height: 60px;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section {
+        font-size: 1.2em;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact p {
+        font-size: 1.5em;
+    }
+
+    .btn-via-sms {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .banner-title {
+        font-size: 1.4rem;
+    }
+}
